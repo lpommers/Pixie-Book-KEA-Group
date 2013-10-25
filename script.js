@@ -10,7 +10,8 @@ $(function(){
 
 			event.preventDefault();
 
-			
+			$('#scene-1-audio').get(0).play();
+
 		});
 
 
