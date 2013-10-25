@@ -5,15 +5,23 @@
 body{
 
 	background-image: url(http://a13pixie12.keaweb.dk/img/background.jpg);
+	width:95%;
+	margin:auto;
+	
 }
 
 div{
 	height: 100%;
+	width:auto;
+	margin:auto;
+	
 }
 div img{
 	height: 100%;
 	margin-top:0;
 	margin-bottom: 0;
 	display: block;
+	margin:auto;
+
 
 }
