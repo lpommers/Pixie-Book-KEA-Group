@@ -7,9 +7,14 @@ div{
 	height: 100%;
 }
 div img{
-	width: 100%;
+	height: 100%;
 	margin-top:0;
 	margin-bottom: 0;
 	
 
+}
+
+#scene2 img{
+	width: 100%;
+	height: auto;
 }
