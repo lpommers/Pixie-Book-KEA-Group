@@ -1,1 +1,1 @@
-$(function(){$("div a").bind("click",function(e){var t=$(this);$("html, body").stop().animate({scrollTop:$(t.attr("href")).offset().top},2e3);e.preventDefault()})});
+$(function(){$("#scene2").hide();$("#scene3").hide();$("div a").bind("click",function(e){var t=$(this),n=$($(this).attr("href"));n.show();$("html, body").stop().animate({scrollTop:$(t.attr("href")).offset().top},2e3);e.preventDefault()})});
