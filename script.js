@@ -6,7 +6,7 @@ $(function(){
 	function scroll(anchor, time){
 		//this is the scrolling animation - where it finds the href and scrolls to it.
 		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top}, time);
+			scrollTop: $(anchor.attr('href')).offset().top}, time, 'easeOutQuad');
 
 			//prevents the default jump to the next link
 			event.preventDefault();
