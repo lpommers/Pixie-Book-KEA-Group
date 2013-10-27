@@ -2,11 +2,11 @@ $(function(){
 	// this hides all the scenes except the title scene when the page loads
 	$('.scene, .scene-wrapper').hide();
 
-	//creates a function that handles the scrolling. It takes whatever has been clicked as a parameter - then finds the href of that link and scrolls to it over 2 seconds.
-	function scroll(anchor){
+	//creates a function that handles the scrolling. It takes two parameters. whatever has been clicked and the time it should take to scroll. - It finds the href of that link and scrolls to it over the given time.
+	function scroll(anchor, time){
 		//this is the scrolling animation - where it finds the href and scrolls to it.
 		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top}, 2000);
+			scrollTop: $(anchor.attr('href')).offset().top}, time);
 
 			//prevents the default jump to the next link
 			event.preventDefault();
@@ -21,7 +21,7 @@ $(function(){
 		$('#scene1').show();
 
 		//calls scrolling method
-		scroll($anchor);
+		scroll($anchor, 2000);
 
 		//this is the audio
 		$('#scene-1-audio').get(0).play();
@@ -35,21 +35,18 @@ $(function(){
 		$('#scene2').show();
 		
 		//calls scrolling method
-		scroll($anchor);
+		scroll($anchor, 2000);
 
 		});
 
 	// This is the second click. It leaves the title screen and scrolls to the bottom of the tower. 
-	$('#scene2-button').bind('click', function(event){
+	$('#scene2-button').bind('click', function(){
 		var $anchor = $(this);
 		$('#scene3-wrapper, #scene2-5-wrapper').show();
 		$('#scene3, #scene2-5').show();
 		
 		//the scrolling
-		$('html, body').stop().animate({
-			scrollTop: $($anchor.attr('href')).offset().top}, 5000);
-
-			event.preventDefault();
+		scroll($anchor,5000);
 
 		});
 
@@ -60,7 +57,7 @@ $(function(){
 		$('#scene4').show();
 		
 		//calls scrolling method
-		scroll($anchor);
+		scroll($anchor, 2000);
 		});
 
 
