@@ -1,15 +1,68 @@
-*{
-	margin: 0
+*,html {
+	margin: 0;
+	height:100%;
 }
 
-
-div{
-	height: 100%;
+body{
+	background-image: url(http://a13pixie12.keaweb.dk/img/background.jpg);
+	
 }
-div img{
-	height: 100%;
-	margin-top:0;
-	margin-bottom: 0;
-	display: block;
 
+img {
+	display:block;
+}
+
+#border-left {
+	position:fixed;
+	left:0;
+	z-index:10;
+}
+
+#border-right {
+	position:fixed;
+	right:0;
+	position:fixed;	
+	z-index:10;
+}
+
+#title-scene {
+	position:relative;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+#title-scene img{
+	height:100%;
+	width:auto;
+	margin:auto;
+
+}
+
+.scene-wrapper {
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+#scene1-wrapper, #scene3-wrapper,#title-wrapper {
+	background-image: url("http://a13pixie12.keaweb.dk/img/hills.png");
+	background-size: auto 100%;
+}
+
+.scene {
+		position:relative;
+		height:100%;
+		width:100%;
+}
+
+.scene img {
+	height:100%;
+	width:auto;
+	margin:auto;
+
+}
+
+.button{
+	margin-left: 35em;
 }

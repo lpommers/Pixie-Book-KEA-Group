@@ -8,37 +8,77 @@
 	 <script src='script.js'></script>
 </head>
 <body>
-	<audio controls autoplay>
-		<source src = 'http://a13pixie12.keaweb.dk/happy_song.mp3' type='audio/mpeg'>
-		<source src = 'http://a13pixie12.keaweb.dk/happy_song.ogg' type='audio/ogg'>	
+   <!-- this is the background music. It is on autoplay. Right now the controls are visible, but we will turn them off.  -->
+	<audio autoplay>
+		<source src = 'http://a13pixie12.keaweb.dk/audio/happy_song.mp3' type='audio/mpeg'>
+		<source src = 'http://a13pixie12.keaweb.dk/audio/happy_song.ogg' type='audio/ogg'>	
 	</audio> 
-
-	<div id='scene1'>
-		<a id='scene1-button' href="#scene2">click here for next scene</a>
-
-		<img src="http://a13pixie12.keaweb.dk/scene1.jpg" alt="scene1">
 	
+	<!--the borders -->
+		<img id="border-left" src="http://a13pixie12.keaweb.dk/img/border-left.png" alt="border left"/>
+		<img id="border-right" src="http://a13pixie12.keaweb.dk/img/border-right.png" alt="border right"/>	
+
+
+	<!-- this is the title screen.  -->
+	<div id='title-wrapper'>
+		<div id='title-scene'>
+			<!-- title screen button - links to first scene -->
+			<a class='button' id='title-button' href="#scene1">click here for next scene</a>
+			<!-- title screen imgage -->
+			<img src="http://a13pixie12.keaweb.dk/img/startscreen.png" alt="scene1">
+		</div>
 	</div>
 
-	<div class='scene' id="scene2">
-		<a id='scene2-button' href="#scene3">click here for next scene</a>
+	<!-- first scene. Prince riding in hills. Rapunzel's room will slide in from side -->
+	<div class="scene-wrapper" id='scene1-wrapper'>
+		<div class='scene' id='scene1'>
+			<!-- scene 1 buttun - links to top of the tower -->
+			<a class='button' id='scene1-button' href="#scene2">click here for next scene</a>
 
-		<img src="http://a13pixie12.keaweb.dk/scene2top.jpg" alt="scene 2">
+			<!-- scene 1 audio -->
+			<audio id='scene-1-audio'>
+				<source src='http://a13pixie12.keaweb.dk/audio/scene1_1.mp3' type='audio/mpeg'>
+				<source src='http://a13pixie12.keaweb.dk/audio/scene1_1.ogg' type='audio/ogg'>
+			</audio>
+		</div>
 	</div>
 
-	<div class='scene' id="scene2-5">
-	
-		<img src="http://a13pixie12.keaweb.dk/scene2middle.jpg" alt="scene1">
+	<!-- scene 2: top of the tower.  -->
+	<div class="scene-wrapper" id='scene2-wrapper'>
+		<div class='scene' id="scene2">
+			<!-- scene 2 buttom - links to bottom of tower -->
+			<a class='button' id='scene2-button' href="#scene3">click here for next scene</a>
 
-		
-	
+			<!-- scene 2 image -->
+			<img src="http://a13pixie12.keaweb.dk/img/scene2top.png" alt="scene 2">
+		</div>
+	</div>
+	<!-- scene2.5: this is the middle of the tower -->
+	<div class="scene-wrapper" id='scene2-5-wrapper'>
+		<div class='scene' id="scene2-5">
+			<!-- image for the middle of the tower -->
+			<img src="http://a13pixie12.keaweb.dk/img/scene2middle.gif" alt="scene1">
+
+		</div>
 	</div>
 
-	<div class="scene" id="scene3">
-		<img src="http://a13pixie12.keaweb.dk/scene2bottom.jpg" alt="scene two bottom">
+	<!-- bottom of tower -->
+	<div class="scene-wrapper" id='scene3-wrapper'>
+		<div class="scene" id="scene3">
+			<!-- image of the bottom of the tower -->
+			<img src="http://a13pixie12.keaweb.dk/img/scene2bottom.png" alt="scene two bottom">
 
-		<a id='scene1-button' href="#scene2">click here for next scene</a>
+			<!-- scene 3 button - links to the final scene -->
+			<a class='button' id='scene3-button' href="#scene4">click here for next scene</a>
+		</div>
 	</div>
 
+	<!-- last secene -->
+	<div class="scene-wrapper" id='scene4-wrapper'>
+		<div class="scene" id="scene4">
+			<!-- final image - prince and maid leaving -->
+			<img src="http://a13pixie12.keaweb.dk/img/lastscene.png" alt="scene two bottom">		
+		</div>
+	</div>
 </body>
 </html>
