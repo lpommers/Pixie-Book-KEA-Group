@@ -1,9 +1,9 @@
-*{
-	margin: 0
+*,html {
+	margin: 0;
+	height:100%;
 }
 
 body{
-
 	background-image: url(http://a13pixie12.keaweb.dk/img/background.jpg);
 	
 }
@@ -18,7 +18,7 @@ img {
 	width:100%;
 }
 
-#scene3-wrapper,#title-wrapper {
+#scene1-wrapper, #scene3-wrapper,#title-wrapper {
 	background-image: url("http://a13pixie12.keaweb.dk/img/hills.png");
 	background-size: auto 100%;
 }
@@ -35,44 +35,3 @@ img {
 	margin:auto;
 
 }
-
-/**.scene-wrapper {
-	position:relative;
-	height:100%;
-	width:100%;
-	overflow:hidden;
-	border:1px solid red;
-}
-
-.scene-wrapper img {
-	position: relative;
-	height:100%;
-	display:block;
-	z-index: 0;
-
-}
-
-.scene{
-	position: relative;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	height: 100%;
-	width:auto;
-	margin:auto;
-	border:1px solid blue;
-}	
-	
-}
-.scene img{
-	position: relative;
-	height: 100%;
-	margin-top:0;
-	margin-bottom: 0;
-	display: block;
-	margin:auto;
-
-
-}
-
-**/
