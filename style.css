@@ -12,11 +12,30 @@ img {
 	display:block;
 }
 
+#border-left {
+	position:fixed;
+	float:left;
+}
+
+#border-right {
+	position:fixed;
+	float:right;
+}
+
+#title-scene {
+	position:relative;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
 #title-scene img{
 	height:100%;
 	width:auto;
 	margin:auto;
+
 }
+
 .scene-wrapper {
 	position:relative;
 	height:100%;
