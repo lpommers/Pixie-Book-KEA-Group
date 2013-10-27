@@ -20,7 +20,7 @@ $(function(){
 
 		});
 
-    // This is the second click. It leaves the title screen and scrolls to the top of the tower. 
+    // This is the second click. It leaves the first screen and scrolls to the top of the tower. 
 	$('#scene1-button').bind('click', function(event){
 		var $anchor = $(this);
 		$('#scene2-wrapper').show();
@@ -42,21 +42,21 @@ $(function(){
 		
 		//the scrolling
 		$('html, body').stop().animate({
-			scrollTop: $($anchor.attr('href')).offset().top}, 2000);
+			scrollTop: $($anchor.attr('href')).offset().top}, 5000);
 
 			event.preventDefault();
 
 		});
 
 	//this will go to whatever next. 
-	$('#scene2-button').bind('click', function(event){
+	$('#scene3-button').bind('click', function(event){
 		var $anchor = $(this);
-		$('#scene3-wrapper').show();
-		$('#scene3').show();
+		$('#scene4-wrapper').show();
+		$('#scene4').show();
 		
 		//the scrolling
 		$('html, body').stop().animate({
-			scrollTop: $($anchor.attr('href')).offset().top}, 5000);
+			scrollTop: $($anchor.attr('href')).offset().top}, 2000);
 
 			event.preventDefault();
 		});
