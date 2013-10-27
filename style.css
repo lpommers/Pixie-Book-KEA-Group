@@ -12,6 +12,11 @@ img {
 	display:block;
 }
 
+#title-scene img{
+	height:100%;
+	width:auto;
+	margin:auto;
+}
 .scene-wrapper {
 	position:relative;
 	height:100%;
