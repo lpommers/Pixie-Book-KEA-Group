@@ -14,12 +14,15 @@ img {
 
 #border-left {
 	position:fixed;
-	float:left;
+	left:0;
+	z-index:10;
 }
 
 #border-right {
 	position:fixed;
-	float:right;
+	right:0;
+	position:fixed;	
+	z-index:10;
 }
 
 #title-scene {
