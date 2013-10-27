@@ -16,14 +16,17 @@
 	</audio> 
 
 	<!-- this is the title screen.  -->
+	<div id='title-wrapper'>
 	<div id='title screen'>
 		<a id='title-button' href="#scene1">click here for next scene</a>
 
-		<img src="http://a13pixie12.keaweb.dk/img/startscreen.jpg" alt="scene1">
+		<img src="http://a13pixie12.keaweb.dk/img/startscreen.png" alt="scene1">
 
+	</div>
 	</div>
 
 	<!-- this is the first scene, inside the princess' tower -->
+	<div class="scene-wrapper" id='scene1-wrapper'>
 	<div class='scene' id='scene1'>
 		<a id='scene1-button' href="#scene2">click here for next scene</a>
 
@@ -35,28 +38,31 @@
 			<source src='http://a13pixie12.keaweb.dk/audio/scene1_1.ogg' type='audio/ogg'>
 		</audio>
 	</div>
-
+	</div>
 	<!-- scene 2: top of the tower.  -->
+	<div class="scene-wrapper" id='scene2-wrapper'>
 	<div class='scene' id="scene2">
 		<a id='scene2-button' href="#scene3">click here for next scene</a>
 
-		<img src="http://a13pixie12.keaweb.dk/img/scene2top.jpg" alt="scene 2">
+		<img src="http://a13pixie12.keaweb.dk/img/scene2top.png" alt="scene 2">
 	</div>
-
-	<!-- scene2.5: this is the bottom of the tower -->
+	</div>
+	<!-- scene2.5: this is the middle of the tower -->
+	<div class="scene-wrapper" id='scene2-5-wrapper'>
 	<div class='scene' id="scene2-5">
 	
-		<img src="http://a13pixie12.keaweb.dk/img/scene2middle.jpg" alt="scene1">
+		<img src="http://a13pixie12.keaweb.dk/img/scene2middle.gif" alt="scene1">
 
 	</div>
+	</div>
 
-
-	<!-- next scene -->
+	<!-- bottom of tower -->
+	<div class="scene-wrapper" id='scene3-wrapper'>
 	<div class="scene" id="scene3">
-		<img src="http://a13pixie12.keaweb.dk/img/scene2bottom.jpg" alt="scene two bottom">
+		<img src="http://a13pixie12.keaweb.dk/img/scene2bottom.gif" alt="scene two bottom">
 
 		<a id='scene1-button' href="#scene2">click here for next scene</a>
 	</div>
-
+	</div>
 </body>
 </html>
