@@ -2,9 +2,9 @@ $(function(){
 	// this hides all the scenes except the title scene when the page loads
 	$('.scene, .scene-wrapper').hide();
 
-	//creates a function the handles the scrolling. 
+	//creates a function that handles the scrolling. It takes whatever has been clicked as a parameter - then finds the href of that link and scrolls to it over 2 seconds.
 	function scroll(anchor){
-		//this is the scrolling animation
+		//this is the scrolling animation - where it finds the href and scrolls to it.
 		$('html, body').stop().animate({
 			scrollTop: $(anchor.attr('href')).offset().top}, 2000);
 
