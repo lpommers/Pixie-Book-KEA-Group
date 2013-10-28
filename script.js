@@ -25,7 +25,7 @@ $(function(){
 		var $anchor = $(this);
 		$('#scene1-wrapper').show();
 		$('#scene1').show();
-		$('#princessroom').fadeIn(3000);
+		$('#princessroom').show().animate({left: '1000px'}, 5000);
 
 
 		//calls scrolling method

@@ -109,5 +109,7 @@ img {
 }
 
 #princessroom{
+	position: absolute;
 	float: left;
+	margin-left: -1000px;
 }
