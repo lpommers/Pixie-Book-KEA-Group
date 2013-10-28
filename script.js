@@ -14,12 +14,12 @@ $(function(){
 	}
 
 	// a function that controls a falling item
-	 function fallingItems(item, time){
-	 	item.fadeIn();
-	 	item.animate({top: '2000px'}, time);
-	 }
+	function fallingItems(item, time){
+		item.fadeIn();
+		item.animate({top: '2000px'}, time);
+	}
 
-
+	
 	// This is the first click. It leaves the title screen and scrolls the first screen. The first audio scene is played on click.
 	$('#title-button').bind('click', function(){
 		var $anchor = $(this);
@@ -60,6 +60,7 @@ $(function(){
 		
 		//the scrolling
 		scroll($anchor,5000);
+		
 		fallingItems($('#socks').delay(700),5000);
 		fallingItems($('#bikini').delay(1000),5000);
 		fallingItems($('#underwear').delay(2000),5000);
