@@ -46,7 +46,7 @@ img {
 }
 
 .add-hills {
-	background-image: url("http://a13pixie12.keaweb.dk/img/hills.png");
+	background-image: url("http://a13pixie12.keaweb.dk/img/hills.gif");
 	background-size: auto 100%;
 }
 
@@ -64,5 +64,50 @@ img {
 }
 
 .button{
-	margin-left: 35em;
+	position:absolute;
+	bottom:0;
+	right:90px;
+	width:10em;
+	height:3em;
+	margin:auto;
+	z-index:20;
+	background-image: url("http://a13pixie12.keaweb.dk/img/arrow.png");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+#socks{
+	width: 25%;
+	height: 25%;
+
+}
+
+#bikini{
+	width: 25%;
+	height: 25%;
+}
+
+#cantaloupe{
+	width: 15%;
+	height: 15%;
+}
+
+#underwear{
+	width: 25%;
+	height: 25%;
+}
+
+.fallingitems{
+	position: absolute;
+	margin-left: 35%;
+	margin-top: 3%;
+
+}
+
+#scene6-wrapper{
+	background-image: url(http://a13pixie12.keaweb.dk/img/hillsbackground.png);
+}
+
+#princessroom{
+	float: left;
 }

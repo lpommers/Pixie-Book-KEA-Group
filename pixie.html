@@ -18,23 +18,23 @@
 	<!--the borders -->
 		<img id="border-left" src="http://a13pixie12.keaweb.dk/img/border-left.png" alt="border left"/>
 		<img id="border-right" src="http://a13pixie12.keaweb.dk/img/border-right.png" alt="border right"/>	
-
-
 	<!-- this is the title screen.  -->
 	<div id='title-wrapper add-hills'>
 		<div id='title-scene'>
 			<!-- title screen button - links to first scene -->
-			<a class='button' id='title-button' href="#scene1">click here for next scene</a>
-			<!-- title screen imgage -->
+			<a class='button' id='title-button' href="#scene1"></a>
+			<!-- title screen image -->
 			<img src="http://a13pixie12.keaweb.dk/img/startscreen.png" alt="scene1">
 		</div>
 	</div>
 
 	<!-- first scene. Prince riding in hills. Rapunzel's room will slide in from side -->
 	<div class="scene-wrapper add-hills" id='scene1-wrapper'>
+
 		<div class='scene' id='scene1'>
+			<img id="princessroom" src="http://a13pixie12.keaweb.dk/img/princessroom.jpg">
 			<!-- scene 1 buttun - links to top of the tower -->
-			<a class='button' id='scene1-button' href="#scene2">click here for next scene</a>
+			<a class='button' id='scene1-button' href="#scene2"></a>
 
 			<!-- scene 1 audio -->
 			<audio id='scene-1-audio'>
@@ -44,11 +44,23 @@
 		</div>
 	</div>
 
+
+		
+		
 	<!-- scene 2: top of the tower.  -->
+
 	<div class="scene-wrapper" id='scene2-wrapper'>
+		
+		<img class="fallingitems" id="socks" src="http://a13pixie12.keaweb.dk/img/socks.png">
+		<img class="fallingitems" id="bikini" src="http://a13pixie12.keaweb.dk/img/bikini.png">
+		<img class="fallingitems" id="underwear" src="http://a13pixie12.keaweb.dk/img/underwear.png">
+		<img class="fallingitems" id="cantaloupe" src="http://a13pixie12.keaweb.dk/img/cantaloupe.png">
+		
 		<div class='scene' id="scene2">
+
+	
 			<!-- scene 2 buttom - links to bottom of tower -->
-			<a class='button' id='scene2-button' href="#scene3">click here for next scene</a>
+			<a class='button' id='scene2-button' href="#scene3"></a>
 
 			<!-- scene 2 image -->
 			<img src="http://a13pixie12.keaweb.dk/img/scene2top.png" alt="scene 2">
@@ -68,18 +80,39 @@
 		<div class="scene" id="scene3">
 			<!-- image of the bottom of the tower -->
 			<img src="http://a13pixie12.keaweb.dk/img/scene2bottom.png" alt="scene two bottom">
-
 			<!-- scene 3 button - links to the final scene -->
-			<a class='button' id='scene3-button' href="#scene4">click here for next scene</a>
+			<a class='button' id='scene3-button' href="#scene4"></a>
 		</div>
 	</div>
 
-	<!-- last secene -->
-	<div class="scene-wrapper add-hills" id='scene4-wrapper'>
-		<div class="scene" id="scene4">
-			<!-- final image - prince and maid leaving -->
-			<img src="http://a13pixie12.keaweb.dk/img/lastscene.png" alt="scene two bottom">		
+	
+	<!-- maid falling-->
+	<div class="scene-wrapper" id='scene4-wrapper'>
+		<div class="scene" id="scene4">		
+		<!-- scene 4 buttom - link to scene 5 -->
+			
+			<a class='button' id='scene4-button' href="#scene5"></a>
+
 		</div>
 	</div>
+	
+	<!-- maid and prince in love-->
+	<div class="scene-wrapper add-hills" id='scene5-wrapper'>
+		<div class="scene" id="scene5">
+		<!-- scene 5 buttom - link to scene 6 -->
+		<a class='button' id='scene5-button' href="#scene6"></a>
+		<img src="http://a13pixie12.keaweb.dk/img/scene5.png" alt="last scene">	
+		</div>
+	</div>
+	
+	<!-- ** LAST SCENE ** maid and prince leaving-->
+	<div class="scene-wrapper add-hills" id='scene6-wrapper'>
+		<div class="scene" id="scene6">
+		<!-- scene 6 buttom - link to top -->
+		
+		<img src="http://a13pixie12.keaweb.dk/img/lastscene.png" alt="last scene">	
+		</div>
+	</div>
+		
 </body>
 </html>
