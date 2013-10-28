@@ -45,7 +45,7 @@ img {
 	width:100%;
 }
 
-#scene1-wrapper, #scene3-wrapper,#title-wrapper {
+.add-hills {
 	background-image: url("http://a13pixie12.keaweb.dk/img/hills.png");
 	background-size: auto 100%;
 }
