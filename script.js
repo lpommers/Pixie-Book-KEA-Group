@@ -49,6 +49,8 @@ $(function(){
 		//calls scrolling method
 		scroll($anchor, 2000);
 
+		$('#scene-2-audio').get(0).play();
+
 		$('#scene1-wrapper, #scene1').fadeOut(2000);
 		});
 
@@ -60,14 +62,21 @@ $(function(){
 		
 		//the scrolling
 		scroll($anchor,5000);
+
+
+		//plays part one of the audio and then animates the falling underwear 11seconds after button has been clicked
+		$('#scene-3-prince-1').get(0).play();
+		fallingItems($('#underwear').delay(1100),5000);
+
+
+		//plays part two of the audio after a 5.5 second delay from the click and the socks are delayed 8 seconds after the click
+		setTimeout("$('#scene-3-prince-2').get(0).play()",5500);
+		fallingItems($('#socks').delay(8000),5000);
+
+		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the click.
+		setTimeout("$('#scene-3-prince-3').get(0).play()",10500);
+		fallingItems($('#cantaloupe').delay(12000),5000);
 		
-		fallingItems($('#socks').delay(700),5000);
-		fallingItems($('#bikini').delay(1000),5000);
-		fallingItems($('#underwear').delay(2000),5000);
-		fallingItems($('#cantaloupe').delay(3000),5000);
-
-	
-
 		});
 
 	//this will go to whatever next. 
