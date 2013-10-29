@@ -19,12 +19,13 @@ $(function(){
 		item.animate({top: '1750px'}, time);
 	}
 
-	$('#title-button').animate({'right':'80px'}, 0);
+	$('.button').hide();
+	$('#title-button').show();
 
 	// This is the first click. It leaves the title screen and scrolls the first screen. The first audio scene is played on click.
 	$('#title-button').bind('click', function(){
 		var $anchor = $(this);
-		$('#scene1-button').animate({'right':'80px'}, 0);
+		$('#scene1-button').delay(5000).fadeIn(1000);
 		$('#scene1-wrapper').show();
 		$('#scene1').show();
 		$('#princessroom').show().animate({left: '1100px'}, 5000);
@@ -45,7 +46,7 @@ $(function(){
 	$('#scene1-button').bind('click', function(){
 		var $anchor = $(this);
 
-		$('#scene2-button').animate({'right':'80px'}, 0);
+		$('#scene2-button').delay(5000).fadeIn(1000);
 		$('#scene2-wrapper').show();
 		$('#scene2').show();
 		$('#fallingItems-wrapper').show();
@@ -62,7 +63,7 @@ $(function(){
 	$('#scene2-button').bind('click', function(){
 		var $anchor = $(this);
 			
-		$('#scene3-button').animate({'right':'80px'}, 0);
+		$('#scene3-button').delay(5000).fadeIn(1000);
 		$('#scene3-wrapper, #scene2-5-wrapper').show();
 		$('#scene3, #scene2-5').show();
 		$('#princetower').show();
@@ -100,7 +101,7 @@ $(function(){
 	$('#scene3-button').bind('click', function(){
 		var $anchor = $(this);
 		
-		$('#scene4-button').animate({'right':'80px'}, 0);
+		$('#scene4-button').delay(5000).fadeIn(1000);
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
 		
@@ -116,7 +117,7 @@ $(function(){
 	$('#scene4-button').bind('click', function(){
 		var $anchor = $(this);
 
-		$('#scene5-button').animate({'right':'80px'}, 0);
+		$('#scene5-button').delay(5000).fadeIn(1000);
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
 		
@@ -132,7 +133,7 @@ $(function(){
 	$('#scene5-button').bind('click', function(){
 		var $anchor = $(this);
 		
-		$('#scene5-button').animate({'right':'80px'}, 0);
+		$('#scene5-button').delay(5000).fadeIn(1000);
 		$('#scene6-wrapper').show();
 		$('#scene6').show();
 		
