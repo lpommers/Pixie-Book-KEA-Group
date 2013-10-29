@@ -101,6 +101,7 @@ img {
 	position: absolute;
 	margin-left: 35%;
 	margin-top: 3%;
+	z-index: 30;
 
 }
 

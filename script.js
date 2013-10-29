@@ -73,10 +73,14 @@ $(function(){
 		setTimeout("$('#scene-3-prince-2').get(0).play()",5500);
 		fallingItems($('#socks').delay(8000),5000);
 
-		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the click.
+		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the
+
 		setTimeout("$('#scene-3-prince-3').get(0).play()",10500);
 		fallingItems($('#cantaloupe').delay(12000),5000);
 		
+
+	
+
 		});
 
 	//this will go to whatever next. 
