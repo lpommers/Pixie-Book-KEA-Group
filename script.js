@@ -80,9 +80,9 @@ $(function(){
 
 		//plays part two of the audio after a 5.5 second delay from the click and the socks are delayed 8 seconds after the click
 		setTimeout("$('#scene-3-prince-2').get(0).play()",5500);
-		fallingItems($('#sock1').delay(2650),5000);
-		fallingItems($('#sock2').delay(5300),5000);
-		fallingItems($('#sock3').delay(8000),5000);
+		fallingItems($('#sock1').delay(8000),5000);
+		fallingItems($('#sock2').delay(8100),5000);
+		fallingItems($('#sock3').delay(8200),5000);
 
 		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the
 
@@ -90,7 +90,7 @@ $(function(){
 		fallingItems($('#cantaloupe').delay(12000),5000);
 
 		//pig falling
-		fallingItems($('#pig').delay(9000),5000);
+		fallingItems($('#pig').delay(15000),5000);
 		
 
 	
