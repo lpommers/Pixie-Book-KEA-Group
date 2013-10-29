@@ -30,9 +30,13 @@ $(function(){
 		$('#scene1-button').delay(5000).fadeIn(1000);
 		$('#scene1-wrapper').show();
 		$('#scene1').show();
+
+		//the princess' room slides in, and at the end of the animation her scream plays.
 		$('#princessroom').show().animate({left: '1100px'}, 5000, function(){
 			$('#scream-audio').get(0).play();
 		});
+
+		//the scream face comes in at this time
 		$('#screamface').delay(5000).fadeIn(2000);
 
 
