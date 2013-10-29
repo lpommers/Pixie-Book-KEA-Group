@@ -90,7 +90,7 @@ $(function(){
 		fallingItems($('#cantaloupe').delay(12000),5000);
 
 		//pig falling
-		fallingItems($('#pig').delay(1100),5000);
+		fallingItems($('#pig').delay(9000),5000);
 		
 
 	

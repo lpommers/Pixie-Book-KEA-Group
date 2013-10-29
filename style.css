@@ -128,9 +128,11 @@ img {
 }
 
 #pig{
-	margin-left: -15%;
+	width: 50%;
+	height: 50%;
+	margin-left: 20%;
 	position: absolute;
-	margin-top: 3%;
+	margin-top: -17%;
 	z-index: 30;
 	
 }
