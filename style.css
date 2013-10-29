@@ -117,3 +117,12 @@ img {
 	float: left;
 	margin-left: -1000px;
 }
+
+#screamface{
+	position: absolute;
+	top:10%;
+	width:auto;
+	height:70%;
+	float: left;
+	margin-left: 100px;
+}
