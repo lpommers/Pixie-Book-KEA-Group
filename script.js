@@ -116,7 +116,7 @@ $(function(){
 		$('#scene4').show();
 		
 	//this will animate the maid to become bigger
-		$('#maidfalling').delay(3000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},15000, function(){
+		$('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
 		$(this).fadeOut(500);
 		$('#scene4').css({'backgroundColor':'white'})
 	 	});
