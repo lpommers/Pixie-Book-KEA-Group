@@ -115,6 +115,12 @@ $(function(){
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
 		
+	//this will animate the maid to become bigger
+		$('#maidfalling').delay(3000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},15000, function(){
+		$(this).fadeOut(500);
+		$('#scene4').css({'backgroundColor':'white'})
+	 	});
+		
 		//calls scrolling method
 		scroll($anchor, 2000);
 
