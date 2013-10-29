@@ -1,6 +1,6 @@
 $(function(){
 	// this hides all the scenes except the title scene when the page loads
-	$('.scene, .scene-wrapper, .fallingitems, #fallingItems-wrapper, #princessroom, #screamface, #princetower').hide();
+	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower').hide();
 
 	//creates a function that handles the scrolling. It takes two parameters. whatever has been clicked and the time it should take to scroll. - It finds the href of that link and scrolls to it over the given time.
 	function scroll(anchor, time){
@@ -16,7 +16,7 @@ $(function(){
 	// a function that controls a falling item
 	function fallingItems(item, time){
 		item.fadeIn();
-		item.animate({top: '1750px'}, time);
+		item.animate({'top': '90%'}, time);
 	}
 
 	$('.button').hide();
@@ -49,7 +49,7 @@ $(function(){
 		$('#scene2-button').delay(5000).fadeIn(1000);
 		$('#scene2-wrapper').show();
 		$('#scene2').show();
-		$('#fallingItems-wrapper').show();
+		$('#falling-objects').show();
 
 		//calls scrolling method
 		scroll($anchor, 2000);

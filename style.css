@@ -164,72 +164,69 @@ img {
 }
 
 
+#falling-objects {
+	position:relative;
+	height:auto;
+}
 
 .fallingitems{
 	position: absolute;
 	margin-left: 35%;
-	margin-top: 3%;
 	z-index: 30;
 }
 
 #sock1{
-	width: 10%;
-	height: 15%;
+	width: auto;
+	height: 9%;
 	position: absolute;
 	margin-left: 30%;
-	margin-top: 3%;
-	z-index: 30;
+	z-index: 26;
 }
 #sock2{
-	width: 10%;
-	height: 15%;
+	width: auto;
+	height: 9%;
 	position: absolute;
 	margin-left: 45%;
-	margin-top: 3%;
-	z-index: 30;
+	z-index: 27;
 }
 #sock3 {
-	width: 10%;
-	height: 15%;
+	width: auto;
+	height: 9%;
 	position: absolute;
 	margin-left: 37%;
-	margin-top: 12%;
-	z-index: 30;
+	z-index: 28;
 }
 
 #underwear1{
-	width: 25%;
-	height: 25%;
+	width: auto;
+	height: 9%;
 	position: absolute;
 	margin-left: 32%;
-	margin-top: 3%;
-	z-index: 30;
+	z-index: 24;
 }
+
 #underwear3{
-	width: 25%;
-	height: 25%;
+	width: auto;
+	height: 9%;
 	position: absolute;
 	margin-left: 48%;
-	margin-top: 12%;
-	z-index: 30;
+	z-index: 25;
 }
 
 #pig{
-	width: 25%;
-	height: 25%;
-	margin-left: 20%;
+	width: auto;
+	height: 9%;
+	margin-left: 30%;
 	position: absolute;
-	margin-top: -17%;
 	z-index: 30;
 	
 }
 
 #cantaloupe{
-	width: 15%;
-	height: 15%;
+	width: auto;
+	height: 9%;
 	position: absolute;
-	margin-top: 3%;
-	z-index: 30;
+	z-index: 29;
 }
 
 #scene6-wrapper{
