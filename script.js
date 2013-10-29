@@ -19,6 +19,8 @@ $(function(){
 		item.animate({top: '1750px'}, time);
 	}
 
+
+
 	$('.button').hide();
 	$('#title-button').show();
 
@@ -28,7 +30,9 @@ $(function(){
 		$('#scene1-button').delay(5000).fadeIn(1000);
 		$('#scene1-wrapper').show();
 		$('#scene1').show();
-		$('#princessroom').show().animate({left: '1100px'}, 5000);
+		$('#princessroom').show().animate({left: '1100px'}, 5000, function(){
+			$('#scream-audio').get(0).play();
+		});
 		$('#screamface').delay(5000).fadeIn(2000);
 
 
