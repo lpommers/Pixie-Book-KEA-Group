@@ -76,33 +76,68 @@ img {
 	background-repeat: no-repeat;
 }
 
-#socks{
-	width: 25%;
-	height: 25%;
 
-}
-
-#bikini{
-	width: 25%;
-	height: 25%;
-}
-
-#cantaloupe{
-	width: 15%;
-	height: 15%;
-}
-
-#underwear{
-	width: 25%;
-	height: 25%;
-}
 
 .fallingitems{
 	position: absolute;
 	margin-left: 35%;
 	margin-top: 3%;
 	z-index: 30;
+}
 
+#sock1{
+	width: 10%;
+	height: 15%;
+	position: absolute;
+	margin-left: 30%;
+	margin-top: 3%;
+	z-index: 30;
+}
+#sock2{
+	width: 10%;
+	height: 15%;
+	position: absolute;
+	margin-left: 25%;
+	margin-top: 3%;
+	z-index: 30;
+}
+#sock3 {
+	width: 10%;
+	height: 15%;
+	position: absolute;
+	margin-left: 40%;
+	margin-top: 3%;
+	z-index: 30;
+}
+
+#underwear1{
+	width: 25%;
+	height: 25%;
+	position: absolute;
+	margin-left: 35%;
+	margin-top: 3%;
+	z-index: 30;
+}
+#underwear3{
+	width: 25%;
+	height: 25%;
+	position: absolute;
+	margin-left: 35%;
+	margin-top: 3%;
+	z-index: 30;
+}
+
+#pig{
+	margin-left: -15%;
+	position: absolute;
+	margin-top: 3%;
+	z-index: 30;
+	
+}
+
+#cantaloupe{
+	width: 15%;
+	height: 15%;
 }
 
 #scene6-wrapper{
@@ -125,4 +160,11 @@ img {
 	height:70%;
 	float: left;
 	margin-left: 100px;
+}
+
+.princetower{
+	position: absolute;
+	bottom: 5%;
+	margin-left: 60%;
+	z-index: 10;
 }

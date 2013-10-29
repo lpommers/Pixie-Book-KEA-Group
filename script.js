@@ -1,6 +1,6 @@
 $(function(){
 	// this hides all the scenes except the title scene when the page loads
-	$('.scene, .scene-wrapper, .fallingitems, #fallingItems-wrapper, #princessroom, #screamface').hide();
+	$('.scene, .scene-wrapper, .fallingitems, #fallingItems-wrapper, #princessroom, #screamface, #princetower').hide();
 
 	//creates a function that handles the scrolling. It takes two parameters. whatever has been clicked and the time it should take to scroll. - It finds the href of that link and scrolls to it over the given time.
 	function scroll(anchor, time){
@@ -60,6 +60,7 @@ $(function(){
 		var $anchor = $(this);
 		$('#scene3-wrapper, #scene2-5-wrapper').show();
 		$('#scene3, #scene2-5').show();
+		$('#princetower').show();
 		
 		//the scrolling
 		scroll($anchor,5000);
@@ -67,17 +68,23 @@ $(function(){
 
 		//plays part one of the audio and then animates the falling underwear 11seconds after button has been clicked
 		$('#scene-3-prince-1').get(0).play();
-		fallingItems($('#underwear').delay(1100),5000);
+		fallingItems($('#underwear1').delay(550),5000);
+		fallingItems($('#underwear3').delay(1100),5000);
 
 
 		//plays part two of the audio after a 5.5 second delay from the click and the socks are delayed 8 seconds after the click
 		setTimeout("$('#scene-3-prince-2').get(0).play()",5500);
-		fallingItems($('#socks').delay(8000),5000);
+		fallingItems($('#sock1').delay(2650),5000);
+		fallingItems($('#sock2').delay(5300),5000);
+		fallingItems($('#sock3').delay(8000),5000);
 
 		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the
 
 		setTimeout("$('#scene-3-prince-3').get(0).play()",10500);
 		fallingItems($('#cantaloupe').delay(12000),5000);
+
+		//pig falling
+		fallingItems($('#pig').delay(1100),5000);
 		
 
 	
