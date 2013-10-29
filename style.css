@@ -66,9 +66,9 @@ img {
 .button{
 	position:absolute;
 	bottom:0;
-	right:90px;
+	right:80px;
 	width:10em;
-	height:3em;
+	height:5em;
 	margin:auto;
 	z-index:20;
 	background-image: url("http://a13pixie12.keaweb.dk/img/arrow.png");
