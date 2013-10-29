@@ -16,7 +16,7 @@ $(function(){
 	// a function that controls a falling item
 	function fallingItems(item, time){
 		item.fadeIn();
-		item.animate({top: '2000px'}, time);
+		item.animate({top: '1750px'}, time);
 	}
 
 	
