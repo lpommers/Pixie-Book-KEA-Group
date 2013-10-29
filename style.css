@@ -259,10 +259,15 @@ img {
 	z-index: 10;
 }
 
+#scene1{
+	overflow: hidden;
+}
+
 #prince-horse{
-	position: absolute;
-	width: 60%;
+	position: relative;
+	width: auto;
 	height: 60%;
+	z-index: 10;
 	top:30%;
 	float: right;
 	margin-right: -1000px;

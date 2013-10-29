@@ -28,8 +28,18 @@ $(function(){
 		$('#scene1-button').delay(5000).fadeIn(1000);
 		$('#scene1-wrapper').show();
 		$('#scene1').show();
-		$('#princessroom').show().animate({left: '1100px'}, 5000);
-		$('#screamface').delay(5000).fadeIn(2000);
+
+
+		$('#horse-audio').get(0).play();
+		$('#prince-horse').show().delay(1500).animate({right: '1100px'}, 3000);
+
+
+		//the princess' room slides in and then her bad hair appears in the mirror
+		$('#princessroom').show().delay(5000).animate({left: '1100px'}, 5000,function(){
+			$('#princess-scream').get(0).play();
+		});
+
+		$('#screamface').delay(10000).fadeIn(2000);
 
 
 		//calls scrolling method
@@ -142,11 +152,6 @@ $(function(){
 
 		$('#scene5-wrapper, #scene5').fadeOut(2000);
 		});
-
-
-
-
-	
 
 
 
