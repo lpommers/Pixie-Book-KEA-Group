@@ -25,7 +25,7 @@ $(function(){
 			$(this).animate({opacity: '1'}, 800);
 			$(this).pulse();
 		});
-  }
+  	}
 
 	//shows the first button and starts blinking
 	$('#title-button').show().pulse();
@@ -50,6 +50,7 @@ $(function(){
 			$(this).delay(3000).animate({left: '0'}, 9000);
 		});
 
+		//fades in princess scream - delays - fades out
 		$('#screamface').delay(10000).fadeIn(2000);
 		$('#screamface').fadeOut(2000);
 
@@ -60,6 +61,7 @@ $(function(){
 		//this is the audio
 		$('#scene-1-audio').get(0).play();
 
+		//fades out scene
 		$('#title-wrapper, #title-scene').fadeOut(2000);
 			
 		});
@@ -68,6 +70,7 @@ $(function(){
 	$('#scene1-button').bind('click', function(){
 		var $anchor = $(this);
 
+		//fades in button and scene
 		$('#scene2-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene2-wrapper').show();
 		$('#scene2').show();
@@ -76,19 +79,21 @@ $(function(){
 		//calls scrolling method
 		scroll($anchor, 2000);
 
+
+		//audio plays
 		$('#scene-2-audio').get(0).play();
 
+		//fades out scene
 		$('#scene1-wrapper, #scene1').fadeOut(2000);
 		});
 
 	// This is the second click. It leaves the title screen and scrolls to the bottom of the tower. 
 	$('#scene2-button').bind('click', function(){
 		var $anchor = $(this);
-			
+		//
 		$('#scene3-button').delay(5000).fadeIn(1000).pulse();
-		$('#scene3-wrapper, #scene2-5-wrapper').show();
-		$('#scene3, #scene2-5').show();
-		$('#princetower').show();
+		$('#scene3-wrapper, #scene2-5-wrapper, #scene3, #scene2-5, #princetower').show();
+	
 		
 		//the scrolling
 		scroll($anchor,5000);
@@ -97,6 +102,8 @@ $(function(){
 		//plays part one of the audio and then animates the falling underwear 11seconds after button has been clicked
 		$('#scene-3-prince-1').get(0).play();
 
+
+		//falling items, they linked in a chain of our falling items function which is an animation
 		$('#underwear1').delay(1000).fallingItems(4000);
 		$('#underwear3').delay(1500).fallingItems(4000, function(){
 				$('#sock1').fallingItems(4000);
@@ -115,10 +122,6 @@ $(function(){
 
 		setTimeout("$('#scene-3-prince-3').get(0).play()",10500);
 	
-		
-
-	
-
 		});
 
 	//this will go to whatever next. 
