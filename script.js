@@ -62,7 +62,7 @@ $(function(){
 
 
 		//this is the audio
-		$('#scene-1-audio').get(0).play();
+		$('#scene1-audio').get(0).play();
 
 		//fades out scene
 		$('#title-wrapper, #title-scene').fadeOut(2000);
@@ -85,7 +85,7 @@ $(function(){
 
 		$('#scene2-action').scroll(7000);
 
-		$('#scene-3-audio').get(0).play();
+		$('#scene2-audio').get(0).play();
 
 
 		//falling items, they linked in a chain of our falling items function which is an animation
