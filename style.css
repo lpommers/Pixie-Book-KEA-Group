@@ -63,6 +63,12 @@ img {
 
 }
 
+.text{
+
+	position: absolute;
+	float: right;
+}
+
 .button{
 	-webkit-animation: pulse 2s infinite;
 	position:absolute;
