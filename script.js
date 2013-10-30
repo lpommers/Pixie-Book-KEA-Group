@@ -1,8 +1,8 @@
 $(function(){
 	// this hides all the scenes except the title scene when the page loads
-	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text').hide();
+	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button').hide();
 
-	//creates a function that handles the scrolling. It takes two parameters. whatever has been clicked and the time it should take to scroll. - It finds the href of that link and scrolls to it over the given time.
+	//creates a function that handles the scrolling. It takes two parameters. 
 	function scroll(anchor, time){
 		//this is the scrolling animation - where it finds the href and scrolls to it.
 		$('html, body').stop().animate({
@@ -19,23 +19,33 @@ $(function(){
     	this.animate({top: '90%'}, time, func);
   	}
 
-	$('.button').hide();
-	$('#title-button').show();
+  	//a pulsing function that makes the next button blink
+  	$.fn.pulse = function(){
+    	$(this).animate({opacity: '0'}, 800, function(){
+			$(this).animate({opacity: '1'}, 800);
+			$(this).pulse();
+		});
+  }
 
-	// This is the first click. It leaves the title screen and scrolls the first screen. The first audio scene is played on click.
+	//shows the first button and starts blinking
+	$('#title-button').show().pulse();
+
+	// This is the first click. It leaves the title screen and scrolls the first screen.
 	$('#title-button').bind('click', function(){
 		var $anchor = $(this);
-		$('#scene1-button').delay(5000).fadeIn(1000);
-		$('#text').fadeIn(2500);
-		$('#scene1-wrapper').show();
-		$('#scene1').show();
 
+		//fades in the button, text, and the scene background
+		$('#scene1-button').delay(5000).fadeIn(1000).pulse();
+		$('#text').fadeIn(2500);
+		$('#scene1-wrapper, #scene1').show();
+
+		//prince on horse comes in. pauses a long time. then exits at the end of the scene
 		$('#prince-horse').show().delay(1500).animate({right: '1100px'}, 3000,function(){
 			$(this).delay(12000).animate({right: '+=2000px'}, 8000);
 		});
 
 
-		//the princess' room slides in and then her bad hair appears in the mirror
+		//the princess' room slides in - pauses -slides out
 		$('#princessroom').show().delay(5000).animate({left: '1100px'}, 5000,function(){
 			$(this).delay(3000).animate({left: '0'}, 9000);
 		});
@@ -58,7 +68,7 @@ $(function(){
 	$('#scene1-button').bind('click', function(){
 		var $anchor = $(this);
 
-		$('#scene2-button').delay(5000).fadeIn(1000);
+		$('#scene2-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene2-wrapper').show();
 		$('#scene2').show();
 		$('#falling-objects').show();
@@ -75,7 +85,7 @@ $(function(){
 	$('#scene2-button').bind('click', function(){
 		var $anchor = $(this);
 			
-		$('#scene3-button').delay(5000).fadeIn(1000);
+		$('#scene3-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene3-wrapper, #scene2-5-wrapper').show();
 		$('#scene3, #scene2-5').show();
 		$('#princetower').show();
@@ -115,11 +125,11 @@ $(function(){
 	$('#scene3-button').bind('click', function(){
 		var $anchor = $(this);
 		
-		$('#scene4-button').delay(5000).fadeIn(1000);
+		$('#scene4-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
 		
-	//this will animate the maid to become bigger
+		//this will animate the maid to become bigger
 		$('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
 		$(this).fadeOut(500);
 		$('#scene4').css({'backgroundColor':'white'})
@@ -137,7 +147,7 @@ $(function(){
 	$('#scene4-button').bind('click', function(){
 		var $anchor = $(this);
 
-		$('#scene5-button').delay(5000).fadeIn(1000);
+		$('#scene5-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
 		
@@ -153,7 +163,7 @@ $(function(){
 	$('#scene5-button').bind('click', function(){
 		var $anchor = $(this);
 		
-		$('#scene5-button').delay(5000).fadeIn(1000);
+		$('#scene5-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene6-wrapper').show();
 		$('#scene6').show();
 		
