@@ -24,6 +24,9 @@ $(function(){
 			$(this).pulse();
 		});
   	}
+  	
+  	//to call on the text
+  	var story = $('#text>div');
 
 	//shows the first button and starts blinking
 	$('#title-button').show().pulse();
@@ -70,6 +73,10 @@ $(function(){
 	$('#scene1-button').bind('click', function(){
 		var $anchor = $(this);
 
+		//changes text
+			story.text('Alas she was too far away to quite make out what he would say');
+		window.setTimeout(function(){story.delay(3000).text('rapunzel, rapunzel throw down your hair she thought he said your underwear')}, 3000);
+		
 		//fades in button and scene
 		$('#scene2-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene2-wrapper, #scene2, #falling-objects').show();
