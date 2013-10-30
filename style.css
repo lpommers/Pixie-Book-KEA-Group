@@ -32,12 +32,17 @@ BORDER AND TEXT BOX
 	display:block;
 }
 
-#text span {
+#text>div {
 	position:absolute;
-	top:30px;
+	top:20px;
 	margin: 50px;
 	font-family: 'Fondamento', sans-serif;
 	font-size:1em;
+}
+
+#text p {
+	height:auto;
+	padding:0.4em 0;
 }
 
 #border-left {
@@ -116,6 +121,7 @@ INDIVIDUAL SCENES
 
 #scene6-wrapper{
 	background-image: url(http://a13pixie12.keaweb.dk/img/hillsbackground.png);
+	background-repeat: repeat;
 }
 
 #falling-objects {
