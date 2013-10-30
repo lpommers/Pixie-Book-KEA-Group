@@ -125,7 +125,7 @@ $(function(){
 	
 		});
 
-	//this will go to whatever next. 
+	//this is click 4, the maid falling. 
 	$('#scene3-button').bind('click', function(){
 		var $anchor = $(this);
 		
@@ -148,7 +148,7 @@ $(function(){
 		
 		});
 
-	//this will go to whatever next. 
+	//maid and prince falling in love. 
 	$('#scene4-button').bind('click', function(){
 		var $anchor = $(this);
 
@@ -165,7 +165,7 @@ $(function(){
 		
 		});
 
-	//this will go to whatever next. 
+	//final scene. 
 	$('#scene5-button').bind('click', function(){
 		var $anchor = $(this);
 		
