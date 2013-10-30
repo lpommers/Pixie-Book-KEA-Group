@@ -3,15 +3,14 @@ $(function(){
 	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button').hide();
 
 	//creates a function that handles the scrolling. It takes two parameters. 
-	function scroll(anchor, time){
-		//this is the scrolling animation - where it finds the href and scrolls to it.
-		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top}, time, 'easeOutQuad');
+	$.fn.scroll = function(time){
+    $('html, body').stop().animate({
+			scrollTop: $(this.attr('href')).offset().top}, time);
 
 			//prevents the default jump to the next link
 			event.preventDefault();
-
-	}
+  }
+  
 
 	// a function that controls a falling item
 	$.fn.fallingItems = function(time, func){
@@ -56,7 +55,9 @@ $(function(){
 
 
 		//calls scrolling method
-		scroll($anchor, 2000);
+		// scroll($anchor, 2000);
+		$('#title-button').scroll(2000);
+
 
 		//this is the audio
 		$('#scene-1-audio').get(0).play();
@@ -77,7 +78,8 @@ $(function(){
 		$('#falling-objects').show();
 
 		//calls scrolling method
-		scroll($anchor, 2000);
+		// scroll($anchor, 2000);
+		$('#scene1-button').scroll(2000);
 
 
 		//audio plays
@@ -96,7 +98,8 @@ $(function(){
 	
 		
 		//the scrolling
-		scroll($anchor,5000);
+		// scroll($anchor,5000);
+		$('#scene2-button').scroll(5000);
 
 
 		//plays part one of the audio and then animates the falling underwear 11seconds after button has been clicked
@@ -139,7 +142,8 @@ $(function(){
 	 	});
 		
 		//calls scrolling method
-		scroll($anchor, 2000);
+		// scroll($anchor, 2000);
+		$('#scene3-button').scroll(2000);
 
 		$('#scene2-wrapper, #scene2, #scene2-5-wrapper, #scene2-5, #scene3, #scene3-wrapper, .fallingitems').fadeOut(2000);
 
@@ -155,7 +159,8 @@ $(function(){
 		$('#scene5').show();
 		
 		//calls scrolling method
-		scroll($anchor, 2000);
+		// scroll($anchor, 2000);
+		$('#scene4-button').scroll(2000);
 
 		$('#scene4-wrapper, #scene4').fadeOut(2000);
 
@@ -171,7 +176,8 @@ $(function(){
 		$('#scene6').show();
 		
 		//calls scrolling method
-		scroll($anchor, 2000);
+		// scroll($anchor, 2000);
+		$('#scene5-button').scroll(2000);
 
 		$('#scene5-wrapper, #scene5').fadeOut(2000);
 		});
