@@ -4,14 +4,13 @@ $(function(){
 
 	//creates a function that handles the scrolling. It takes two parameters. 
 	$.fn.scroll = function(time){
-    $('html, body').stop().animate({
+   		 $('html, body').stop().animate({
 			scrollTop: $(this.attr('href')).offset().top}, time);
 
 			//prevents the default jump to the next link
 			event.preventDefault();
   }
   
-
 	// a function that controls a falling item
 	$.fn.fallingItems = function(time, func){
 		this.fadeIn();
@@ -73,9 +72,8 @@ $(function(){
 
 		//fades in button and scene
 		$('#scene2-button').delay(5000).fadeIn(1000).pulse();
-		$('#scene2-wrapper').show();
-		$('#scene2').show();
-		$('#falling-objects').show();
+		$('#scene2-wrapper, #scene2, #falling-objects').show();
+		
 
 		//calls scrolling method
 		// scroll($anchor, 2000);
