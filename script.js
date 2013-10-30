@@ -1,6 +1,6 @@
 $(function(){
 	// this hides all the scenes except the title scene when the page loads
-	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button').hide();
+	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button, #princecrying').hide();
 
 	//creates a function that handles the scrolling. It takes two parameters. 
 	$.fn.scroll = function(time){
@@ -111,22 +111,37 @@ $(function(){
 	//this is click 4, the maid falling. 
 	$('#scene3-action').bind('click', function(){
 		var $anchor = $(this);
+		$('.fallingitems').fadeOut(2000);
+		
+		$('#princetower').fadeOut(2000);
+		$('#princecrying').fadeIn(2000);
+
 		
 		$('#scene4-action').delay(5000).fadeIn(1000).pulse();
-		$('#scene3-wrapper').show();
-		$('#scene3').show();
-		
-		//this will animate the maid to become bigger
-		$('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
-		$(this).fadeOut(500);
-		$('#scene3').css({'backgroundColor':'white'})
-	 	});
-		
-		//calls scrolling method
-		// scroll($anchor, 2000);
-		$('#scene3-action').scroll(2000);
 
-		$('#scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').fadeOut(2000);
+
+		// $('#scene3-wrapper, #scene3').show();
+
+		
+	
+		
+
+
+
+
+
+
+		// //this will animate the maid to become bigger
+		// $('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
+		// $(this).fadeOut(500);
+		// $('#scene3').css({'backgroundColor':'white'})
+	 // 	});
+		
+		// //calls scrolling method
+		// // scroll($anchor, 2000);
+		// $('#scene3-action').scroll(2000);
+
+		// $('#scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').fadeOut(2000);
 
 		
 		});
