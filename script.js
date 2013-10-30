@@ -29,14 +29,14 @@ $(function(){
   	var story = $('#text>div');
 
 	//shows the first button and starts blinking
-	$('#title-button').show().pulse();
+	$('#scene1-action').show().pulse();
 
 	// This is the first click. It leaves the title screen and scrolls the first screen.
-	$('#title-button').bind('click', function(){
+	$('#scene1-action').bind('click', function(){
 		var $anchor = $(this);
 
 		//fades in the button, text, and the scene background
-		$('#scene1-button').delay(5000).fadeIn(1000).pulse();
+		$('#scene2-action').delay(5000).fadeIn(1000).pulse();
 		$('#text').fadeIn(2500);
 		$('#scene1-wrapper, #scene1').show();
 
@@ -58,7 +58,7 @@ $(function(){
 
 		//calls scrolling method
 		// scroll($anchor, 2000);
-		$('#title-button').scroll(2000);
+		$('#scene1-action').scroll(2000);
 
 
 		//this is the audio
@@ -70,7 +70,7 @@ $(function(){
 	});
 
     // This is the second click. It leaves the first screen and scrolls to the top of the tower. 
-	$('#scene1-button').bind('click', function(){
+	$('#scene2-action').bind('click', function(){
 		var $anchor = $(this);
 
 		//changes text
@@ -80,18 +80,12 @@ $(function(){
 		//fades in button and scene
 		
 		$('#scene2-wrapper, #scene2, #falling-objects, #scene2-5-wrapper, #scene2-5, #scene3-wrapper, #scene3, #princetower').show();
-		$('#scene3-button').delay(5000).fadeIn(1000).pulse();
+		$('#scene3-action').delay(5000).fadeIn(1000).pulse();
 
 
-		$('#scene1-button').scroll(7000);
+		$('#scene2-action').scroll(7000);
 
-
-		//audio plays
-		$('#scene-2-audio').get(0).play();
-
-
-		//plays part one of the audio and then animates the falling underwear 11seconds after button has been clicked
-		$('#scene-3-prince-1').get(0).play();
+		$('#scene-3-audio').get(0).play();
 
 
 		//falling items, they linked in a chain of our falling items function which is an animation
@@ -108,23 +102,17 @@ $(function(){
 				});
 			});
 		
-		//plays part two of the audio after a 5.5 second delay from the click and the socks are delayed 8 seconds after the click
-		setTimeout("$('#scene-3-prince-2').get(0).play()",5500);
-		
-		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the
-
-		setTimeout("$('#scene-3-prince-3').get(0).play()",10500);
-
+	
 		//fades out scene
 		$('#scene1, #scene1-wrapper').delay(7000).fadeOut(2000);
 	
 		});
 
 	//this is click 4, the maid falling. 
-	$('#scene3-button').bind('click', function(){
+	$('#scene3-action').bind('click', function(){
 		var $anchor = $(this);
 		
-		$('#scene4-button').delay(5000).fadeIn(1000).pulse();
+		$('#scene4-action').delay(5000).fadeIn(1000).pulse();
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
 		
@@ -136,7 +124,7 @@ $(function(){
 		
 		//calls scrolling method
 		// scroll($anchor, 2000);
-		$('#scene3-button').scroll(2000);
+		$('#scene3-action').scroll(2000);
 
 		$('#scene2-wrapper, #scene2, #scene2-5-wrapper, #scene2-5, #scene3, #scene3-wrapper, .fallingitems').fadeOut(2000);
 
@@ -144,16 +132,16 @@ $(function(){
 		});
 
 	//maid and prince falling in love. 
-	$('#scene4-button').bind('click', function(){
+	$('#scene4-action').bind('click', function(){
 		var $anchor = $(this);
 
-		$('#scene5-button').delay(5000).fadeIn(1000).pulse();
+		$('#scene5-action').delay(5000).fadeIn(1000).pulse();
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
 		
 		//calls scrolling method
 		// scroll($anchor, 2000);
-		$('#scene4-button').scroll(2000);
+		$('#scene4-action').scroll(2000);
 
 		$('#scene4-wrapper, #scene4').fadeOut(2000);
 
@@ -161,10 +149,9 @@ $(function(){
 		});
 
 	//final scene. 
-	$('#scene5-button').bind('click', function(){
+	$('#scene5-action').bind('click', function(){
 		var $anchor = $(this);
 		
-		$('#scene5-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene6-wrapper').show();
 		$('#scene6').show();
 		//
@@ -185,7 +172,7 @@ $(function(){
 		window.setTimeout(makeSomeHearts, 2000);		
 		//calls scrolling method
 		// scroll($anchor, 2000);
-		$('#scene5-button').scroll(2000);
+		$('#scene5-action').scroll(2000);
 
 		$('#scene5-wrapper, #scene5').fadeOut(2000);
 		});
