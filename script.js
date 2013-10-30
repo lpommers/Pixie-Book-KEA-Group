@@ -14,10 +14,10 @@ $(function(){
 	}
 
 	// a function that controls a falling item
-	function fallingItems(item, time){
-		item.fadeIn();
-		item.animate({'top': '90%'}, time);
-	}
+	$.fn.fallingItems = function(time, func){
+		this.fadeIn();
+    	this.animate({top: '90%'}, time, func);
+  	}
 
 	$('.button').hide();
 	$('#title-button').show();
@@ -84,23 +84,25 @@ $(function(){
 
 		//plays part one of the audio and then animates the falling underwear 11seconds after button has been clicked
 		$('#scene-3-prince-1').get(0).play();
-		fallingItems($('#underwear1').delay(550),5000);
-		fallingItems($('#underwear3').delay(1100),5000);
 
-
+		$('#underwear1').delay(1000).fallingItems(4000);
+		$('#underwear3').delay(1500).fallingItems(4000, function(){
+				$('#sock1').fallingItems(4000);
+				$('#sock2').delay(500).fallingItems(4000);
+				$('#sock3').delay(1000).fallingItems(4000, function(){
+					$('#cantaloupe').fallingItems(4000, function(){
+						$('#pig').fallingItems(4000);
+					});
+				});
+			});
+		
 		//plays part two of the audio after a 5.5 second delay from the click and the socks are delayed 8 seconds after the click
 		setTimeout("$('#scene-3-prince-2').get(0).play()",5500);
-		fallingItems($('#sock1').delay(8000),5000);
-		fallingItems($('#sock2').delay(8100),5000);
-		fallingItems($('#sock3').delay(8200),5000);
-
+		
 		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the
 
 		setTimeout("$('#scene-3-prince-3').get(0).play()",10500);
-		fallingItems($('#cantaloupe').delay(12000),5000);
-
-		//pig falling
-		fallingItems($('#pig').delay(15000),5000);
+	
 		
 
 	
