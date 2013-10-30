@@ -73,9 +73,14 @@ $(function(){
 	$('#scene2-action').bind('click', function(){
 		var $anchor = $(this);
 
-		//changes text
+		// TEXT SEQUENCES
 			story.text('Alas she was too far away to quite make out what he would say');
-		window.setTimeout(function(){story.delay(3000).text('rapunzel, rapunzel throw down your hair she thought he said your underwear')}, 3000);
+		window.setTimeout(function(){story.text('Rapunzel, Rapunzel throw down your hair she thought he said your underwear')}, 5000);
+		window.setTimeout(function(){story.append('<br><br> No Rapunzel your curly locks rapunzel threw down her dirty socks')}, 11000);
+		window.setTimeout(function(){story.text('Rapunzel do you have a rope Rapunzel dropped a cantelope')}, 15500);
+		window.setTimeout(function(){story.append('<br><br>It burst in pieces by his side "Oh bad catch!" Rapunzel cried')}, 18500);
+		window.setTimeout(function(){story.text('Perhaps, he sighed, this is a test and bound by love he did not rest ')}, 25000);
+		window.setTimeout(function(){story.append('<br><br>Okay Rapunzel how about twine she heaved out her blue ribbon swine')}, 27500);
 		
 		//fades in button and scene
 		
@@ -88,11 +93,12 @@ $(function(){
 		$('#scene2-audio').get(0).play();
 
 
+
 		//falling items, they linked in a chain of our falling items function which is an animation
 
 
-		$('#underwear1').delay(1000).fallingItems(4000);
-		$('#underwear3').delay(1500).fallingItems(4000, function(){
+		$('#underwear1').delay(8000).fallingItems(4000);
+		$('#underwear3').delay(8500).fallingItems(4000, function(){
 				$('#sock1').fallingItems(4000);
 				$('#sock2').delay(500).fallingItems(4000);
 				$('#sock3').delay(1000).fallingItems(4000, function(){
