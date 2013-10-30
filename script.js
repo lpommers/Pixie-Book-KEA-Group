@@ -109,7 +109,7 @@ $(function(){
 		});
 
 	//this is click 4, the maid falling. 
-	$('#scene2-3-action').bind('click', function(){
+	$('#scene3-action').bind('click', function(){
 		var $anchor = $(this);
 		
 		$('#scene4-action').delay(5000).fadeIn(1000).pulse();
