@@ -122,6 +122,7 @@ INDIVIDUAL SCENES
 #scene6-wrapper{
 	background-image: url(http://a13pixie12.keaweb.dk/img/hillsbackground.png);
 	background-repeat: repeat;
+	overflow: hidden;
 }
 
 #falling-objects {

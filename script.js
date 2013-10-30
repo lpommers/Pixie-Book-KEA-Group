@@ -172,7 +172,22 @@ $(function(){
 		$('#scene5-button').delay(5000).fadeIn(1000).pulse();
 		$('#scene6-wrapper').show();
 		$('#scene6').show();
-		
+		//
+		var numHearts = 0;
+		var makeSomeHearts = function(){
+			var thisNewHeart = $('<img src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
+			var rtop = (Math.random()*600) + "px";
+			var rleft = (Math.random()*600) + "px";
+			//var rRot = "rotate" + (Math.random()*360) + "deg";
+			thisNewHeart.css({left:rleft, top:rtop, position:"absolute"});
+			$('#scene6').append(thisNewHeart);
+			numHearts = numHearts + 1;
+			if (numHearts < 99) {
+				window.setTimeout(makeSomeHearts, 500);
+			}
+		};
+
+		window.setTimeout(makeSomeHearts, 2000);		
 		//calls scrolling method
 		// scroll($anchor, 2000);
 		$('#scene5-button').scroll(2000);
