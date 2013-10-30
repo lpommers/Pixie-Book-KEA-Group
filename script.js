@@ -9,7 +9,7 @@ $(function(){
 
 			//prevents the default jump to the next link
 			event.preventDefault();
-  }
+  	}
   
 	// a function that controls a falling item
 	$.fn.fallingItems = function(time, func){
@@ -117,10 +117,11 @@ $(function(){
 	//this is click 4, the maid falling. 
 	$('#scene3-action').bind('click', function(){
 		var $anchor = $(this);
-		$('.fallingitems').fadeOut(2000);
+		$('.fallingitems, #princetower').fadeOut(2000);
 		
-		$('#princetower').fadeOut(2000);
-		$('#princecrying').fadeIn(2000);
+		$('#princecrying').fadeIn(2000, function(){
+			$('#scene3-audio').get(0).play();
+		});
 
 		
 		$('#scene4-action').delay(5000).fadeIn(1000).pulse();
@@ -128,14 +129,7 @@ $(function(){
 
 		// $('#scene3-wrapper, #scene3').show();
 
-		
 	
-		
-
-
-
-
-
 
 		// //this will animate the maid to become bigger
 		// $('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
