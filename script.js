@@ -67,7 +67,7 @@ $(function(){
 		//fades out scene
 		$('#title-wrapper, #title-scene').fadeOut(2000);
 			
-		});
+	});
 
     // This is the second click. It leaves the first screen and scrolls to the top of the tower. 
 	$('#scene1-button').bind('click', function(){
@@ -78,33 +78,16 @@ $(function(){
 		window.setTimeout(function(){story.delay(3000).text('rapunzel, rapunzel throw down your hair she thought he said your underwear')}, 3000);
 		
 		//fades in button and scene
-		$('#scene2-button').delay(5000).fadeIn(1000).pulse();
-		$('#scene2-wrapper, #scene2, #falling-objects').show();
 		
+		$('#scene2-wrapper, #scene2, #falling-objects, #scene2-5-wrapper, #scene2-5, #scene3-wrapper, #scene3, #princetower').show();
+		$('#scene3-button').delay(5000).fadeIn(1000).pulse();
 
-		//calls scrolling method
-		// scroll($anchor, 2000);
-		$('#scene1-button').scroll(2000);
+
+		$('#scene1-button').scroll(7000);
 
 
 		//audio plays
 		$('#scene-2-audio').get(0).play();
-
-		//fades out scene
-		$('#scene1-wrapper, #scene1').fadeOut(2000);
-		});
-
-	// This is the second click. It leaves the title screen and scrolls to the bottom of the tower. 
-	$('#scene2-button').bind('click', function(){
-		var $anchor = $(this);
-		//
-		$('#scene3-button').delay(5000).fadeIn(1000).pulse();
-		$('#scene3-wrapper, #scene2-5-wrapper, #scene3, #scene2-5, #princetower').show();
-	
-		
-		//the scrolling
-		// scroll($anchor,5000);
-		$('#scene2-button').scroll(5000);
 
 
 		//plays part one of the audio and then animates the falling underwear 11seconds after button has been clicked
@@ -112,6 +95,8 @@ $(function(){
 
 
 		//falling items, they linked in a chain of our falling items function which is an animation
+
+
 		$('#underwear1').delay(1000).fallingItems(4000);
 		$('#underwear3').delay(1500).fallingItems(4000, function(){
 				$('#sock1').fallingItems(4000);
@@ -129,6 +114,9 @@ $(function(){
 		//plays part three of the audio after a 10.5 second delay and animates the cantaloupe after a 12 second delay from the
 
 		setTimeout("$('#scene-3-prince-3').get(0).play()",10500);
+
+		//fades out scene
+		$('#scene1, #scene1-wrapper').delay(7000).fadeOut(2000);
 	
 		});
 
