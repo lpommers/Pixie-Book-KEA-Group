@@ -111,7 +111,7 @@ $(function(){
 				$('#sock2').delay(500).fallingItems(4000);
 				$('#sock3').delay(1000).fallingItems(4000, function(){
 					$('#cantaloupe').fallingItems(4000, function(){
-						$('#pig').fallingItems(4000);
+						$('#pig').delay(13500).fallingItems(4000);
 					});
 				});
 			});
