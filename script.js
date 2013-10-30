@@ -79,7 +79,7 @@ $(function(){
 		
 		//fades in button and scene
 		
-		$('#scene2-wrapper, #scene2, #falling-objects, #scene2-5-wrapper, #scene2-5, #scene3-wrapper, #scene3, #princetower').show();
+		$('#scene2-1-wrapper, #scene2-1, #falling-objects, #scene2-2-wrapper, #scene2-2, #scene2-3-wrapper, #scene2-3, #princetower').show();
 		$('#scene3-action').delay(5000).fadeIn(1000).pulse();
 
 
@@ -109,24 +109,24 @@ $(function(){
 		});
 
 	//this is click 4, the maid falling. 
-	$('#scene3-action').bind('click', function(){
+	$('#scene2-3-action').bind('click', function(){
 		var $anchor = $(this);
 		
 		$('#scene4-action').delay(5000).fadeIn(1000).pulse();
-		$('#scene4-wrapper').show();
-		$('#scene4').show();
+		$('#scene3-wrapper').show();
+		$('#scene3').show();
 		
 		//this will animate the maid to become bigger
 		$('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
 		$(this).fadeOut(500);
-		$('#scene4').css({'backgroundColor':'white'})
+		$('#scene3').css({'backgroundColor':'white'})
 	 	});
 		
 		//calls scrolling method
 		// scroll($anchor, 2000);
 		$('#scene3-action').scroll(2000);
 
-		$('#scene2-wrapper, #scene2, #scene2-5-wrapper, #scene2-5, #scene3, #scene3-wrapper, .fallingitems').fadeOut(2000);
+		$('#scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').fadeOut(2000);
 
 		
 		});
@@ -136,14 +136,14 @@ $(function(){
 		var $anchor = $(this);
 
 		$('#scene5-action').delay(5000).fadeIn(1000).pulse();
-		$('#scene5-wrapper').show();
-		$('#scene5').show();
+		$('#scene4-wrapper').show();
+		$('#scene4').show();
 		
 		//calls scrolling method
 		// scroll($anchor, 2000);
 		$('#scene4-action').scroll(2000);
 
-		$('#scene4-wrapper, #scene4').fadeOut(2000);
+		$('#scene3-wrapper, #scene3').fadeOut(2000);
 
 		
 		});
@@ -152,8 +152,8 @@ $(function(){
 	$('#scene5-action').bind('click', function(){
 		var $anchor = $(this);
 		
-		$('#scene6-wrapper').show();
-		$('#scene6').show();
+		$('#scene5-wrapper').show();
+		$('#scene5').show();
 		//
 		var numHearts = 0;
 		var makeSomeHearts = function(){
@@ -174,7 +174,7 @@ $(function(){
 		// scroll($anchor, 2000);
 		$('#scene5-action').scroll(2000);
 
-		$('#scene5-wrapper, #scene5').fadeOut(2000);
+		$('#scene4-wrapper, #scene4').fadeOut(2000);
 		});
 
 
