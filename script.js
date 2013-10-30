@@ -40,18 +40,18 @@ $(function(){
 		$('#scene1-wrapper, #scene1').show();
 
 		//prince on horse comes in. pauses a long time. then exits at the end of the scene
-		$('#prince-horse').show().delay(1500).animate({right: '1100px'}, 3000,function(){
-			$(this).delay(12000).animate({right: '+=2000px'}, 8000);
+		$('#prince-horse').show().delay(4000).animate({right: '1100px'}, 5000,function(){
+			$(this).delay(10000).animate({right: '+=2000px'}, 8000);
 		});
 
 
 		//the princess' room slides in - pauses -slides out
-		$('#princessroom').show().delay(5000).animate({left: '1100px'}, 5000,function(){
+		$('#princessroom').show().delay(8000).animate({left: '1100px'}, 5000,function(){
 			$(this).delay(3000).animate({left: '0'}, 9000);
 		});
 
 		//fades in princess scream - delays - fades out
-		$('#screamface').delay(10000).fadeIn(2000);
+		$('#screamface').delay(13500).fadeIn(2000);
 		$('#screamface').fadeOut(2000);
 
 
