@@ -119,7 +119,7 @@ INDIVIDUAL SCENES
 
 }
 
-#scene6-wrapper{
+#scene5-wrapper{
 	background-image: url(http://a13pixie12.keaweb.dk/img/hillsbackground.png);
 	background-repeat: repeat;
 	overflow: hidden;
@@ -240,7 +240,7 @@ INDIVIDUAL SCENES
 
 \*MAID FALLING*\
 
-#scene4 {
+#scene3 {
 	overflow:hidden;
 	transition: background-color 5s;
 	-webkit-transition: background-color 5s; /* Safari */
