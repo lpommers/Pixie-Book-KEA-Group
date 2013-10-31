@@ -44,7 +44,7 @@
 	<div class="scene-wrapper add-hills" id='scene1-wrapper'>
 
 		<div class='scene' id='scene1'>
-			<img id="princessroom" src="http://a13pixie12.keaweb.dk/img/princessroom.jpg">
+			<img id="princessroom" src="http://a13pixie12.keaweb.dk/img/princessroom.png">
 			<img id="screamface" src="http://a13pixie12.keaweb.dk/img/screamface.png">
 			<img class='prince' id='prince-horse'src="http://a13pixie12.keaweb.dk/img/prince-horse.png">
 			<!-- scene 1 buttun - links to bottom of the tower -->
@@ -64,7 +64,7 @@
 	
 	<div id="falling-objects">
 	
-	<img class="fallingitems" id="sock1" src="http://a13pixie12.keaweb.dk/img/sock1.png">
+		<img class="fallingitems" id="sock1" src="http://a13pixie12.keaweb.dk/img/sock1.png">
 		<img class="fallingitems" id="sock2" src="http://a13pixie12.keaweb.dk/img/sock2.png">
 		<img class="fallingitems" id="sock3" src="http://a13pixie12.keaweb.dk/img/sock3.png">
 		<img class="fallingitems" id="pig" src="http://a13pixie12.keaweb.dk/img/pig.png">
@@ -72,49 +72,58 @@
 		<img class="fallingitems" id="underwear3" src="http://a13pixie12.keaweb.dk/img/underwear3.png">
 		<img class="fallingitems" id="cantaloupe" src="http://a13pixie12.keaweb.dk/img/cantaloupe.png">
 
-	<div class="scene-wrapper" id='scene2-1-wrapper'>
+		<div class="scene-wrapper" id='scene2-1-wrapper'>
 		
-		
-		<div class='scene' id="scene2-1">	
+			<div class='scene' id="scene2-1">	
 			
 			<!-- scene 2 image -->
-			<img src="http://a13pixie12.keaweb.dk/img/scene2top.png" alt="scene 2">
+				<img src="http://a13pixie12.keaweb.dk/img/scene2top.png" alt="scene 2">
 
+			</div>
 		</div>
-	</div>
 	<!-- scene2.5: this is the middle of the tower -->
-	<div class="scene-wrapper" id='scene2-2-wrapper'>
-		<div class='scene' id="scene2-2">
+		<div class="scene-wrapper" id='scene2-2-wrapper'>
+			<div class='scene' id="scene2-2">
 			<!-- image for the middle of the tower -->
-			<img src="http://a13pixie12.keaweb.dk/img/scene2middle.gif" alt="scene1">
+				<img src="http://a13pixie12.keaweb.dk/img/scene2middle.gif" alt="scene1">
 
+			</div>
 		</div>
-	</div>
 
 	<!-- bottom of tower -->
-	<div class="scene-wrapper add-hills" id='scene2-3-wrapper'>
-		<img class="prince" id="princetower" src="http://a13pixie12.keaweb.dk/img/princetower.png">
-		<div class="scene" id="scene2-3">
+		<div class="scene-wrapper add-hills" id='scene2-3-wrapper'>
+			<img class="prince" id="princetower" src="http://a13pixie12.keaweb.dk/img/princetower.png">
+			<img class='prince' id='princecrying' src="http://a13pixie12.keaweb.dk/img/princecrying.png" alt="prince crying">
+			<div class="scene" id="scene2-3">
 			<!-- image of the bottom of the tower -->
-			<img src="http://a13pixie12.keaweb.dk/img/scene2bottom.png" alt="scene two bottom">
+				<img src="http://a13pixie12.keaweb.dk/img/scene2bottom.png" alt="scene two bottom">
 			<!-- scene 3 button - links to the final scene -->
-			<a class='button' id='scene3-action' href="#scene3"></a>
+				<a class='button' id='scene3-action' href="#scene3"></a>
 
-			<audio id='scene2-audio'>
-				<source src='http://a13pixie12.keaweb.dk/audio/scene3/scene2and3.mp3' type='audio/mpeg'>
-				<source src='http://a13pixie12.keaweb.dk/audio/scene3/scene2and3.ogg' type='audio/ogg'>
-			</audio>
-			
+				<audio id='scene2-audio'>
+					<source src='http://a13pixie12.keaweb.dk/audio/scene3/scene2and3.mp3' type='audio/mpeg'>
+					<source src='http://a13pixie12.keaweb.dk/audio/scene3/scene2and3.ogg' type='audio/ogg'>
+				</audio>
+		
+			</div>
 		</div>
-	</div>
 	</div>
 	
 	<!-- maid falling-->
 	<div class="scene-wrapper" id='scene3-wrapper'>
 		<div class="scene" id="scene3">		
-		<!-- scene 4 buttom - link to scene 5 -->
-			<img id="maidfalling" src="http://a13pixie12.keaweb.dk/img/maidfalling.png"/>
+			<!-- scene 4 buttom - link to scene 5 -->
 			<a class='button' id='scene4-action' href="#scene4"></a>
+
+			<!-- prince calling out audio -->
+			<audio id='scene3-audio'>
+					<source src='http://a13pixie12.keaweb.dk/audio/scene4/part1.mp3' type='audio/mpeg'>
+					<source src='http://a13pixie12.keaweb.dk/audio/scene4/part1.ogg' type='audio/ogg'>
+			</audio>
+
+			<!-- maid falling image -->
+			<img id="maidfalling" src="http://a13pixie12.keaweb.dk/img/maidfalling.png"/>
+
 
 		</div>
 	</div>
@@ -125,6 +134,12 @@
 		<!-- scene 5 buttom - link to scene 6 -->
 		<a class='button' id='scene5-action' href="#scene5"></a>
 		<img src="http://a13pixie12.keaweb.dk/img/scene5.png" alt="last scene">	
+		
+		<audio id='scene4-audio'>
+				<source src='http://a13pixie12.keaweb.dk/audio/scene5/scene5.mp3' type='audio/mpeg'>
+				<source src='http://a13pixie12.keaweb.dk/audio/scene5/scene5.ogg' type='audio/ogg'>
+		</audio>
+		
 		</div>
 	</div>
 	
@@ -133,6 +148,14 @@
 		<div class="scene" id="scene5">
 		<!-- scene 6 buttom - link to top -->
 		
+
+		<a class='button' id='end-button' href="#"></a>
+		
+		<audio id='scene5-audio'>
+				<source src='http://a13pixie12.keaweb.dk/audio/scene6/scene6.mp3' type='audio/mpeg'>
+				<source src='http://a13pixie12.keaweb.dk/audio/scene6/scene6.ogg' type='audio/ogg'>
+		</audio>
+
 		<img src="http://a13pixie12.keaweb.dk/img/lastscene.png" alt="last scene">
 		<!--<img src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">	-->
 		</div>

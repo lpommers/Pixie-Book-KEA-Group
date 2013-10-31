@@ -1,6 +1,6 @@
 $(function(){
 	// this hides all the scenes except the title scene when the page loads
-	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button').hide();
+	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button, #princecrying').hide();
 
 	//creates a function that handles the scrolling. It takes two parameters. 
 	$.fn.scroll = function(time){
@@ -9,7 +9,7 @@ $(function(){
 
 			//prevents the default jump to the next link
 			event.preventDefault();
-  }
+  	}
   
 	// a function that controls a falling item
 	$.fn.fallingItems = function(time, func){
@@ -53,7 +53,7 @@ $(function(){
 
 		//fades in princess scream - delays - fades out
 		$('#screamface').delay(13500).fadeIn(2000);
-		$('#screamface').fadeOut(2000);
+		$('#screamface').delay(500).animate({'marginLeft':'-1000px'},9000);
 
 
 		//calls scrolling method
@@ -73,9 +73,14 @@ $(function(){
 	$('#scene2-action').bind('click', function(){
 		var $anchor = $(this);
 
-		//changes text
+		// TEXT SEQUENCES
 			story.text('Alas she was too far away to quite make out what he would say');
-		window.setTimeout(function(){story.delay(3000).text('rapunzel, rapunzel throw down your hair she thought he said your underwear')}, 3000);
+		window.setTimeout(function(){story.text('Rapunzel, Rapunzel throw down your hair she thought he said your underwear')}, 5000);
+		window.setTimeout(function(){story.append('<br><br> No Rapunzel your curly locks rapunzel threw down her dirty socks')}, 11000);
+		window.setTimeout(function(){story.text('Rapunzel do you have a rope Rapunzel dropped a cantaloupe')}, 15500);
+		window.setTimeout(function(){story.append('<br><br>It burst in pieces by his side "Oh bad catch!" Rapunzel cried')}, 20000);
+		window.setTimeout(function(){story.text('Perhaps, he sighed, this is a test and bound by love he did not rest ')}, 26000);
+		window.setTimeout(function(){story.append('<br><br>Okay Rapunzel how about twine she heaved out her blue ribbon swine')}, 33000);
 		
 		//fades in button and scene
 		
@@ -88,11 +93,12 @@ $(function(){
 		$('#scene2-audio').get(0).play();
 
 
+
 		//falling items, they linked in a chain of our falling items function which is an animation
 
 
-		$('#underwear1').delay(1000).fallingItems(4000);
-		$('#underwear3').delay(1500).fallingItems(4000, function(){
+		$('#underwear1').delay(8000).fallingItems(4000);
+		$('#underwear3').delay(8500).fallingItems(4000, function(){
 				$('#sock1').fallingItems(4000);
 				$('#sock2').delay(500).fallingItems(4000);
 				$('#sock3').delay(1000).fallingItems(4000, function(){
@@ -111,22 +117,33 @@ $(function(){
 	//this is click 4, the maid falling. 
 	$('#scene3-action').bind('click', function(){
 		var $anchor = $(this);
+	
+		$('.fallingitems, #princetower').fadeOut(2000);
 		
-		$('#scene4-action').delay(5000).fadeIn(1000).pulse();
-		$('#scene3-wrapper').show();
-		$('#scene3').show();
-		
+		$('#princecrying').fadeIn(1000, function(){
+			$('#scene3-audio').get(0).play();
+			
+			// TEXT change
+		story.text('At this the poor prince had a cry then cupped his hands for one last try');
+		window.setTimeout(function(){story.append('<br><br>Rapunzel Rapunzel let down your braid confused Rapunzel pushed out her maid')}, 7000);	
+			
+		});
+
+
+		//this will show and then scroll to the maid automatically 
+		setTimeout("$('#scene3-wrapper, #scene3').show()", 8000);
+		setTimeout("$('#scene3-action').scroll(2000)", 15000);
+
 		//this will animate the maid to become bigger
-		$('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
+	
+		$('#maidfalling').delay(17000).animate({'height':'800%','width':'auto', 'top':'-400%','left':'-150%'},5000, function(){
 		$(this).fadeOut(500);
 		$('#scene3').css({'backgroundColor':'white'})
 	 	});
-		
-		//calls scrolling method
-		// scroll($anchor, 2000);
-		$('#scene3-action').scroll(2000);
+	
+		$('#scene4-action').delay(15000).fadeIn(1000).pulse();
 
-		$('#scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').fadeOut(2000);
+		$('#scene2-1, #scene2-1-wrapper, #scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').delay(20000).fadeOut(2000);
 
 		
 		});
@@ -138,6 +155,15 @@ $(function(){
 		$('#scene5-action').delay(5000).fadeIn(1000).pulse();
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
+
+		$('#scene4-audio').get(0).play();
+		
+		// TEXT change
+		
+		story.text("The maid fell squarely on the prince quite pleased with the coincidence");
+		window.setTimeout(function(){story.append("<br><br>Then smiling said, For what it's worth I'm really down to earth")}, 4000);
+		window.setTimeout(function(){story.text('His young heart thrilled and he gave a hoot for what was more the maid was cute')}, 7000);
+		
 		
 		//calls scrolling method
 		// scroll($anchor, 2000);
@@ -154,15 +180,24 @@ $(function(){
 		
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
-		//
+	
+		$('#scene5-audio').get(0).play();
+
+		// TEXT change
+		
+		story.text("Rapunzel watched them ride from sight I'm glad I finally heard them right");
+		window.setTimeout(function(){story.append("<br><br>I hope if they come back for more they'll think to knock at my back door")},5000);
+		window.setTimeout(function(){story.text('The maid leaned close so he could hear she whispered something in his ear ')}, 10000);
+		window.setTimeout(function(){story.append("<br><br>I fell for you when we first met, he nodded, how could I forget")},14000);
+		
 		var numHearts = 0;
 		var makeSomeHearts = function(){
 			var thisNewHeart = $('<img src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
-			var rtop = (Math.random()*600) + "px";
-			var rleft = (Math.random()*600) + "px";
+			var rtop = (Math.random()*400) + "px";
+			var rleft = (Math.random()*400) + "px";
 			//var rRot = "rotate" + (Math.random()*360) + "deg";
 			thisNewHeart.css({left:rleft, top:rtop, position:"absolute"});
-			$('#scene6').append(thisNewHeart);
+			$('#scene5').append(thisNewHeart);
 			numHearts = numHearts + 1;
 			if (numHearts < 99) {
 				window.setTimeout(makeSomeHearts, 500);
@@ -174,9 +209,19 @@ $(function(){
 		// scroll($anchor, 2000);
 		$('#scene5-action').scroll(2000);
 
+		//shows the the end - replay button
+		$('#end-button').show().pulse();
+		$('#end-button').css({'backgroundImage':'url("http://a13pixie12.keaweb.dk/img/theend.png")', 'width':'10em', 'height':'20em'});
+
 		$('#scene4-wrapper, #scene4').fadeOut(2000);
 		});
 
+	$('#end-button').click(function(){
+		event.preventDefault();
+		window.location.reload();
 
+
+
+	});
 
 });
