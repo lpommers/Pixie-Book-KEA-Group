@@ -127,8 +127,8 @@ $(function(){
 
 
 		//this will show and then scroll to the maid automatically 
-		setTimeout("$('#scene3-wrapper, #scene3').show()", 5000);
-		setTimeout("$('#scene3-action').scroll(2000)", 6000);
+		setTimeout("$('#scene3-wrapper, #scene3').show()", 8000);
+		setTimeout("$('#scene3-action').scroll(2000)", 9000);
 
 		//this will animate the maid to become bigger
 
