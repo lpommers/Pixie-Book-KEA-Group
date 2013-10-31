@@ -180,6 +180,8 @@ $(function(){
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
 	
+		$('#scene5-audio').get(0).play();
+
 		// TEXT change
 		
 		story.text("Rapunzel watched them ride from sight I'm glad I finally heard them right<br><br>I hope if they come back for more they'll think to knock at my back door");
