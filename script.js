@@ -77,7 +77,7 @@ $(function(){
 			story.text('Alas she was too far away to quite make out what he would say');
 		window.setTimeout(function(){story.text('Rapunzel, Rapunzel throw down your hair she thought he said your underwear')}, 5000);
 		window.setTimeout(function(){story.append('<br><br> No Rapunzel your curly locks rapunzel threw down her dirty socks')}, 11000);
-		window.setTimeout(function(){story.text('Rapunzel do you have a rope Rapunzel dropped a cantelope')}, 15500);
+		window.setTimeout(function(){story.text('Rapunzel do you have a rope Rapunzel dropped a cantaloupe')}, 15500);
 		window.setTimeout(function(){story.append('<br><br>It burst in pieces by his side "Oh bad catch!" Rapunzel cried')}, 20000);
 		window.setTimeout(function(){story.text('Perhaps, he sighed, this is a test and bound by love he did not rest ')}, 26000);
 		window.setTimeout(function(){story.append('<br><br>Okay Rapunzel how about twine she heaved out her blue ribbon swine')}, 33000);
@@ -161,7 +161,8 @@ $(function(){
 		// TEXT change
 		
 		story.text("The maid fell squarely on the prince quite pleased with the coincidence");
-		window.setTimeout(function(){story.append('<br><br>His young heart thrilled and he gave a hoot for what was more the maid was cute')}, 6000);
+		window.setTimeout(function(){story.append("<br><br>Then smiling said, For what it's worth I'm really down to earth")}, 4000);
+		window.setTimeout(function(){story.text('His young heart thrilled and he gave a hoot for what was more the maid was cute')}, 7000);
 		
 		
 		//calls scrolling method
@@ -185,7 +186,7 @@ $(function(){
 		// TEXT change
 		
 		story.text("Rapunzel watched them ride from sight I'm glad I finally heard them right");
-		window.setTimeout(function(){story.append("<br><br>I hope if they come back for more they'll think to knock at my back door")},3000);
+		window.setTimeout(function(){story.append("<br><br>I hope if they come back for more they'll think to knock at my back door")},5000);
 		window.setTimeout(function(){story.text('The maid leaned close so he could hear she whispered something in his ear ')}, 10000);
 		window.setTimeout(function(){story.append("<br><br>I fell for you when we first met, he nodded, how could I forget")},14000);
 		
@@ -195,7 +196,7 @@ $(function(){
 			var rtop = (Math.random()*600) + "px";
 			var rleft = (Math.random()*600) + "px";
 			//var rRot = "rotate" + (Math.random()*360) + "deg";
-			thisNewHeart.css({left:rleft, top:rtop, position:"absolute"});
+			thisNewHeart.css({left:rleft, right:rtop, position:"absolute"});
 			$('#scene5').append(thisNewHeart);
 			numHearts = numHearts + 1;
 			if (numHearts < 99) {
