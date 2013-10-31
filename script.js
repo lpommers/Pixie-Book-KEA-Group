@@ -53,7 +53,7 @@ $(function(){
 
 		//fades in princess scream - delays - fades out
 		$('#screamface').delay(13500).fadeIn(2000);
-		$('#screamface').fadeOut(2000);
+		$('#screamface').delay(500).animate({'marginLeft':'-1000px'},9000);
 
 
 		//calls scrolling method
@@ -117,31 +117,29 @@ $(function(){
 	//this is click 4, the maid falling. 
 	$('#scene3-action').bind('click', function(){
 		var $anchor = $(this);
+	
 		$('.fallingitems, #princetower').fadeOut(2000);
 		
-		$('#princecrying').fadeIn(2000, function(){
+		$('#princecrying').fadeIn(3000, function(){
 			$('#scene3-audio').get(0).play();
+			
 		});
 
-		
-		$('#scene4-action').delay(5000).fadeIn(1000).pulse();
 
+		//this will show and then scroll to the maid automatically 
+		setTimeout("$('#scene3-wrapper, #scene3').show()", 5000);
+		setTimeout("$('#scene3-action').scroll(2000)", 6000);
 
-		// $('#scene3-wrapper, #scene3').show();
+		//this will animate the maid to become bigger
 
+		$('#maidfalling').delay(6500).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
+		$(this).fadeOut(500);
+		$('#scene3').css({'backgroundColor':'white'})
+	 	});
 	
+		$('#scene4-action').delay(15000).fadeIn(1000).pulse();
 
-		// //this will animate the maid to become bigger
-		// $('#maidfalling').delay(2000).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
-		// $(this).fadeOut(500);
-		// $('#scene3').css({'backgroundColor':'white'})
-	 // 	});
-		
-		// //calls scrolling method
-		// // scroll($anchor, 2000);
-		// $('#scene3-action').scroll(2000);
-
-		// $('#scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').fadeOut(2000);
+		$('#scene2-1, #scene2-1-wrapper, #scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').delay(20000).fadeOut(2000);
 
 		
 		});
