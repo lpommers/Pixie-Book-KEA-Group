@@ -119,6 +119,10 @@ INDIVIDUAL SCENES
 
 }
 
+#scene3-wrapper {
+	overflow:hidden;
+}
+
 #scene5-wrapper{
 	background-image: url(http://a13pixie12.keaweb.dk/img/hillsbackground.png);
 	background-repeat: repeat;
