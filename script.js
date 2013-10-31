@@ -155,6 +155,8 @@ $(function(){
 		$('#scene5-action').delay(5000).fadeIn(1000).pulse();
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
+
+		$('#scene4-audio').get(0).play();
 		
 		// TEXT change
 		
