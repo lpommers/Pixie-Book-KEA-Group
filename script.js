@@ -78,9 +78,9 @@ $(function(){
 		window.setTimeout(function(){story.text('Rapunzel, Rapunzel throw down your hair she thought he said your underwear')}, 5000);
 		window.setTimeout(function(){story.append('<br><br> No Rapunzel your curly locks rapunzel threw down her dirty socks')}, 11000);
 		window.setTimeout(function(){story.text('Rapunzel do you have a rope Rapunzel dropped a cantelope')}, 15500);
-		window.setTimeout(function(){story.append('<br><br>It burst in pieces by his side "Oh bad catch!" Rapunzel cried')}, 18500);
+		window.setTimeout(function(){story.append('<br><br>It burst in pieces by his side "Oh bad catch!" Rapunzel cried')}, 20000);
 		window.setTimeout(function(){story.text('Perhaps, he sighed, this is a test and bound by love he did not rest ')}, 25000);
-		window.setTimeout(function(){story.append('<br><br>Okay Rapunzel how about twine she heaved out her blue ribbon swine')}, 27500);
+		window.setTimeout(function(){story.append('<br><br>Okay Rapunzel how about twine she heaved out her blue ribbon swine')}, 32000);
 		
 		//fades in button and scene
 		
@@ -120,7 +120,7 @@ $(function(){
 	
 		$('.fallingitems, #princetower').fadeOut(2000);
 		
-		$('#princecrying').fadeIn(3000, function(){
+		$('#princecrying').fadeIn(1000, function(){
 			$('#scene3-audio').get(0).play();
 			
 		});
@@ -128,11 +128,11 @@ $(function(){
 
 		//this will show and then scroll to the maid automatically 
 		setTimeout("$('#scene3-wrapper, #scene3').show()", 8000);
-		setTimeout("$('#scene3-action').scroll(2000)", 9000);
+		setTimeout("$('#scene3-action').scroll(2000)", 11000);
 
 		//this will animate the maid to become bigger
 
-		$('#maidfalling').delay(6500).animate({'height':'1000%','width':'auto', 'top':'-400%','left':'-150%'},10000, function(){
+		$('#maidfalling').delay(13000).animate({'height':'800%','width':'auto', 'top':'-400%','left':'-150%'},5000, function(){
 		$(this).fadeOut(500);
 		$('#scene3').css({'backgroundColor':'white'})
 	 	});
