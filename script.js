@@ -204,8 +204,8 @@ $(function(){
 		$('#scene5-action').scroll(2000);
 
 		//shows the the end - replay button
-		$('#end-button').show();
-		$('#end-button').css({'backgroundImage':'url("http://a13pixie12.keaweb.dk/img/theend.png")'});
+		$('#end-button').show().pulse();
+		$('#end-button').css({'backgroundImage':'url("http://a13pixie12.keaweb.dk/img/theend.png")', 'width':'10em', 'height':'20em'});
 
 		$('#scene4-wrapper, #scene4').fadeOut(2000);
 		});
