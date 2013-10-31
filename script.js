@@ -191,7 +191,7 @@ $(function(){
 			var rleft = (Math.random()*600) + "px";
 			//var rRot = "rotate" + (Math.random()*360) + "deg";
 			thisNewHeart.css({left:rleft, top:rtop, position:"absolute"});
-			$('#scene6').append(thisNewHeart);
+			$('#scene5').append(thisNewHeart);
 			numHearts = numHearts + 1;
 			if (numHearts < 99) {
 				window.setTimeout(makeSomeHearts, 500);
