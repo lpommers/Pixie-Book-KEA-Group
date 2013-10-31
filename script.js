@@ -125,7 +125,7 @@ $(function(){
 			
 			// TEXT change
 		story.text('At this the poor prince had a cry then cupped his hands for one last try');
-		window.setTimeout(function(){story.append('<br><br>Rapunzel Rapunzel let down your braid confused Rapunzel pushed out her maid')}, 5000);	
+		window.setTimeout(function(){story.append('<br><br>Rapunzel Rapunzel let down your braid confused Rapunzel pushed out her maid')}, 7000);	
 			
 		});
 
