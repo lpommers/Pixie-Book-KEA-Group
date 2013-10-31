@@ -123,16 +123,20 @@ $(function(){
 		$('#princecrying').fadeIn(1000, function(){
 			$('#scene3-audio').get(0).play();
 			
+			// TEXT change
+		story.text('At this the poor prince had a cry then cupped his hands for one last try');
+		window.setTimeout(function(){story.append('<br><br>Rapunzel Rapunzel let down your braid confused Rapunzel pushed out her maid')}, 5000);	
+			
 		});
 
 
 		//this will show and then scroll to the maid automatically 
 		setTimeout("$('#scene3-wrapper, #scene3').show()", 8000);
-		setTimeout("$('#scene3-action').scroll(2000)", 11000);
+		setTimeout("$('#scene3-action').scroll(2000)", 15000);
 
 		//this will animate the maid to become bigger
-
-		$('#maidfalling').delay(13000).animate({'height':'800%','width':'auto', 'top':'-400%','left':'-150%'},5000, function(){
+	
+		$('#maidfalling').delay(17000).animate({'height':'800%','width':'auto', 'top':'-400%','left':'-150%'},5000, function(){
 		$(this).fadeOut(500);
 		$('#scene3').css({'backgroundColor':'white'})
 	 	});
@@ -152,6 +156,12 @@ $(function(){
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
 		
+		// TEXT change
+		
+		story.text("The maid fell squarely on the prince quite pleased with the coincidence<br><br>then smiling said for what it's worth I'm really down to earth");
+		window.setTimeout(function(){story.text('His young heart thrilled and he gave a hoot for what was more the maid was cute')}, 9000);
+		
+		
 		//calls scrolling method
 		// scroll($anchor, 2000);
 		$('#scene4-action').scroll(2000);
@@ -167,7 +177,13 @@ $(function(){
 		
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
-		//
+	
+		// TEXT change
+		
+		story.text("Rapunzel watched them ride from sight I'm glad I finally heard them right<br><br>I hope if they come back for more they'll think to knock at my back door");
+		window.setTimeout(function(){story.text('The maid leaned close so he could hear she whispered something in his ear<br><br>I fell for you when we first met, he nodded, how could I forget ')}, 10000);
+		
+		
 		var numHearts = 0;
 		var makeSomeHearts = function(){
 			var thisNewHeart = $('<img src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
