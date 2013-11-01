@@ -152,11 +152,11 @@ $(function(){
 			$('#scene3-audio').get(0).play();
 			
 			// TEXT change
-		story.text('At this the poor prince had a cry then cupped his hands for one last try');
 
 
-		story.text('At this the poor prince had a cry then cupped his hands for one last try');
-		window.setTimeout(function(){story.append('<br><br>Rapunzel Rapunzel let down your braid confused Rapunzel pushed out her maid')}, 7000);	
+			story.replaceText(200, 'At this the poor prince had a cry then cupped his hands for one last try.');
+
+			story.addText(7000, '<p>"Rapunzel, Rapunzel let down your braid". Confused Rapunzel pushed out her maid.</p>');	
 			
 		});
 
@@ -191,9 +191,10 @@ $(function(){
 		
 		// TEXT change
 		
-		story.text("The maid fell squarely on the prince quite pleased with the coincidence");
-		window.setTimeout(function(){story.append("<br><br>Then smiling said, For what it's worth I'm really down to earth")}, 4000);
-		window.setTimeout(function(){story.text('His young heart thrilled and he gave a hoot for what was more the maid was cute')}, 7000);
+
+		story.replaceText(200, 'The maid fell squarely on the prince quite pleased with the coincidence.');
+		story.addText(4000, '<p>Then smiling said, "For what its worth Im really down to earth."');
+		story.addText(4600, 'His young heart thrilled and he gave a hoot for what was more the maid was cute.');
 		
 		
 		//calls scrolling method
@@ -216,10 +217,17 @@ $(function(){
 
 		// TEXT change
 		
-		story.text("Rapunzel watched them ride from sight I'm glad I finally heard them right");
-		window.setTimeout(function(){story.append("<br><br>I hope if they come back for more they'll think to knock at my back door")},5000);
-		window.setTimeout(function(){story.text('The maid leaned close so he could hear she whispered something in his ear ')}, 10000);
-		window.setTimeout(function(){story.append("<br><br>I fell for you when we first met, he nodded, how could I forget")},14000);
+
+		story.replaceText(200, "Rapunzel watched them ride from sight I'm glad I finally heard them right");
+
+
+		story.addText(3000, '<p>"I hope if they come back for more theyll think to knock at my back door"</p>');
+
+
+		story.addText(5000, '<p>The maid leaned close so he could hear she whispered something in his ear</p>');
+
+
+		story.replaceText(6500, '"I fell for you when we first met", he nodded, "how could I forget"');
 		
 		var numHearts = 0;
 		var makeSomeHearts = function(){
