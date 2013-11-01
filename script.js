@@ -103,7 +103,7 @@ $(function(){
 				$('#sock2').delay(500).fallingItems(4000);
 				$('#sock3').delay(1000).fallingItems(4000, function(){
 					$('#cantaloupe').fallingItems(4000, function(){
-						$(this).fadeOut(100);
+						$(this).hide();
 							$('#cantaloupe4').fadeIn(100, function(){
 							$('#cantaloupe4').fadeOut(100);
 								$('#cantaloupe3').fadeIn(100, function(){
