@@ -158,7 +158,7 @@ $(function(){
 	
 		$('#maidfalling').delay(17000).animate({'height':'800%','width':'auto', 'top':'-400%','left':'-150%'},5000, function(){
 		$(this).fadeOut(500);
-		$('#scene3').css({'backgroundColor':'white'})
+		$('#scene3').css({'backgroundColor':'white'});
 		});
 	
 		$('#scene4-action').delay(15000).fadeIn(1000).pulse();
