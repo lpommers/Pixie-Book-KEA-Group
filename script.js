@@ -4,43 +4,42 @@ $(function(){
 
 	//creates a function that handles the scrolling. It takes two parameters. 
 	$.fn.scroll = function(time){
-   		 $('html, body').stop().animate({
-			scrollTop: $(this.attr('href')).offset().top}, time);
+		$('html, body').stop().animate({scrollTop: $(this.attr('href')).offset().top}, time);
 
 			//prevents the default jump to the next link
 			event.preventDefault();
-  	}
+		};
   
 	// a function that controls a falling item
 	$.fn.fallingItems = function(time, func){
 		this.fadeIn();
-    	this.animate({top: '90%'}, time, func);
-  	}
+		this.animate({top: '90%'}, time, func);
+	};
 
-  	//a pulsing function that makes the next button blink
-  	$.fn.pulse = function(){
-    	$(this).animate({opacity: '0'}, 800, function(){
+	//a pulsing function that makes the next button blink
+	$.fn.pulse = function(){
+		$(this).animate({opacity: '0'}, 800, function(){
 			$(this).animate({opacity: '1'}, 800);
 			$(this).pulse();
 		});
-  	}
+	};
 
-  	$.fn.replaceText = function(time, newText){
-    	this.delay(time).queue(function(next){
-      		$(this).text(newText);
-        	next();
-    	});
-  	}
+	$.fn.replaceText = function(time, newText){
+		this.delay(time).queue(function(next){
+			$(this).text(newText);
+			next();
+		});
+	};
   
-    $.fn.addText = function(time, newHTML){
-    	this.delay(time).queue(function(next){
-      		$(this).append(newHTML);
-       		next();   
-    	});
-    }
-  	
-  	//to call on the text
-  	var story = $('#text>div');
+	$.fn.addText = function(time, newHTML){
+		this.delay(time).queue(function(next){
+			$(this).append(newHTML);
+			next();
+		});
+	};
+	
+	//to call on the text
+	var story = $('#text>div');
 
 	//shows the first button and starts blinking
 	$('#scene1-action').show().pulse();
@@ -53,8 +52,6 @@ $(function(){
 	
 	// This is the first click. It leaves the title screen and scrolls the first screen.
 	$('#scene1-action').bind('click', function(){
-		var $anchor = $(this);
-
 		//fades in the button, text, and the scene background
 		$('#scene2-action').delay(5000).fadeIn(1000).pulse();
 		$('#text').fadeIn(2500);
@@ -89,28 +86,18 @@ $(function(){
 			
 	});
 
-    // This is the second click. It leaves the first screen and scrolls to the top of the tower. 
+	// This is the second click. It leaves the first screen and scrolls to the top of the tower. 
 	$('#scene2-action').bind('click', function(){
-		var $anchor = $(this);
-
 		// TEXT SEQUENCES
 		story.replaceText(200, 'Alas she was too far away to quite make out what he would say.');
-
 		story.addText(4000,'<p>"Rapunzel, Rapunzel throw down your hair". She thought he said your underwear.</p>');
-
-		story.addText(6000,'<p>"No Rapunzel your curly locks". Rapunzel threw down her dirty socks.</p>');	
-		
+		story.addText(6000,'<p>"No Rapunzel your curly locks". Rapunzel threw down her dirty socks.</p>');
 		story.replaceText(6000, '"Rapunzel, do you have a rope?". Rapunzel dropped a cantaloupe.');
-
 		story.addText(4000,'<p>It burst in pieces by his side. "Oh, bad catch!" Rapunzel cried.</p>');
-
 		story.addText(7000, '<p>"Perhaps" he sighed "This is a test", and bound by love he did not rest.</p>');
+		story.replaceText(7500, '"Okay Rapunzel, how about twine?" She heaved out her blue ribbon swine.');
 
-		story.replaceText(7500, '"Okay Rapunzel, how about twine?" She heaved out her blue ribbon swine.'); 
-
-		
 		//fades in button and scene
-		
 		$('#scene2-1-wrapper, #scene2-1, #falling-objects, #scene2-2-wrapper, #scene2-2, #scene2-3-wrapper, #scene2-3, #princetower').show();
 		$('#scene3-action').delay(5000).fadeIn(1000).pulse();
 
@@ -134,35 +121,31 @@ $(function(){
 							$('#cantaloupe4').fadeIn(100, function(){
 							$('#cantaloupe4').fadeOut(100);
 								$('#cantaloupe3').fadeIn(100, function(){
-								$('#cantaloupe3').fadeOut(100);		
+									$('#cantaloupe3').fadeOut(100);		
 								});
 							});
 						$('#pig').delay(13500).fallingItems(4000);
 					});
 				});
 			});
-		
-	
+
 		//fades out scene
 		$('#scene1, #scene1-wrapper').delay(7000).fadeOut(2000);
-	
 		});
 
 	//this is click 4, the maid falling. 
 	$('#scene3-action').bind('click', function(){
-		var $anchor = $(this);
-	
 		$('.fallingitems, #princetower').fadeOut(2000);
 		
 		$('#princecrying').fadeIn(1000, function(){
 			$('#scene3-audio').get(0).play();
 			
+			
+
 			// TEXT change
-
-
 			story.replaceText(200, 'At this the poor prince had a cry then cupped his hands for one last try.');
 
-			story.addText(7000, '<p>"Rapunzel, Rapunzel let down your braid". Confused Rapunzel pushed out her maid.</p>');	
+			story.addText(7000, '<p>"Rapunzel, Rapunzel let down your braid". Confused Rapunzel pushed out her MAID!!!</p>');	
 			
 		});
 
@@ -176,7 +159,7 @@ $(function(){
 		$('#maidfalling').delay(17000).animate({'height':'800%','width':'auto', 'top':'-400%','left':'-150%'},5000, function(){
 		$(this).fadeOut(500);
 		$('#scene3').css({'backgroundColor':'white'})
-	 	});
+		});
 	
 		$('#scene4-action').delay(15000).fadeIn(1000).pulse();
 
@@ -187,17 +170,15 @@ $(function(){
 
 	//maid and prince falling in love. 
 	$('#scene4-action').bind('click', function(){
-		var $anchor = $(this);
 
 		$('#scene5-action').delay(5000).fadeIn(1000).pulse();
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
 
 		$('#scene4-audio').get(0).play();
-		
-		// TEXT change
-		
 
+
+		// TEXT change
 		story.replaceText(200, 'The maid fell squarely on the prince quite pleased with the coincidence.');
 		story.addText(4000, '<p>Then smiling said, "For what its worth Im really down to earth."');
 		story.addText(4600, 'His young heart thrilled and he gave a hoot for what was more the maid was cute.');
@@ -214,7 +195,6 @@ $(function(){
 
 	//final scene. 
 	$('#scene5-action').bind('click', function(){
-		var $anchor = $(this);
 		
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
@@ -264,9 +244,6 @@ $(function(){
 	$('#end-button').click(function(){
 		event.preventDefault();
 		window.location.reload();
-
-
-
 	});
 
 });
