@@ -30,7 +30,13 @@ $(function(){
 
 	//shows the first button and starts blinking
 	$('#scene1-action').show().pulse();
-
+	
+	//interactive maid on title screen
+	$('#maid-title').draggable();
+	$('#maid-title').on('mousedown',function(){
+		$('#maidscream-audio').get(0).play();
+	});
+	
 	// This is the first click. It leaves the title screen and scrolls the first screen.
 	$('#scene1-action').bind('click', function(){
 		var $anchor = $(this);
