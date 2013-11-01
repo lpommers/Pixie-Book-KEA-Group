@@ -234,7 +234,8 @@ $(function(){
 
 
 		story.replaceText(6500, '"I fell for you when we first met", he nodded, "how could I forget"');
-		
+		story.replaceText(6700, '');
+
 		var numHearts = 0;
 		var makeSomeHearts = function(){
 			var thisNewHeart = $('<img src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
@@ -255,8 +256,8 @@ $(function(){
 		$('#scene5-action').scroll(2000);
 
 		//shows the the end - replay button
-		$('#end-button').show().pulse();
-		$('#end-button').css({'backgroundImage':'url("http://a13pixie12.keaweb.dk/img/theend.png")', 'width':'10em', 'height':'20em'});
+		$('#end-button').delay(22000).fadeIn().pulse();
+		$('#end-button').css({'backgroundImage':'url("http://a13pixie12.keaweb.dk/img/theend.png")', 'width':'10em', 'height':'38em'});
 
 		$('#scene4-wrapper, #scene4').fadeOut(2000);
 		});
