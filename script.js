@@ -236,27 +236,23 @@ $(function(){
 		story.replaceText(6500, '"I fell for you when we first met", he nodded, "how could I forget"');
 		story.replaceText(6700, '');
 
-		var numHearts = 0;
 		var makeSomeHearts = function(){
-			var thisNewHeart = $('<img src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
-			var rtop = (Math.random()*400) + "px";
-			var rleft = (Math.random()*400) + "px";
+			var thisNewHeart = $('<img class="hearts"/src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
+			var rtop = (Math.random()*100) + "%";
+			var rleft = (Math.random()*100) + "%";
 			//var rRot = "rotate" + (Math.random()*360) + "deg";
 			thisNewHeart.css({left:rleft, top:rtop, position:"absolute"});
 			$('#scene5').append(thisNewHeart);
-			numHearts = numHearts + 1;
-			if (numHearts < 99) {
-				window.setTimeout(makeSomeHearts, 500);
-			}
 		};
 
-		window.setTimeout(makeSomeHearts, 2000);		
+		$('#scene5').click(makeSomeHearts, 2000);	
+			
 		//calls scrolling method
 		// scroll($anchor, 2000);
 		$('#scene5-action').scroll(2000);
 
 		//shows the the end - replay button
-		$('#end-button').delay(22000).fadeIn().pulse();
+		$('#end-button').delay(23000).fadeIn().pulse();
 		$('#end-button').css({'backgroundImage':'url("http://a13pixie12.keaweb.dk/img/theend.png")', 'width':'10em', 'height':'38em'});
 
 		$('#scene4-wrapper, #scene4').fadeOut(2000);
@@ -265,8 +261,6 @@ $(function(){
 	$('#end-button').click(function(){
 		event.preventDefault();
 		window.location.reload();
-
-
 
 	});
 
