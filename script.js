@@ -140,13 +140,9 @@ $(function(){
 		$('#princecrying').fadeIn(1000, function(){
 			$('#scene3-audio').get(0).play();
 			
-			
-
 			// TEXT change
 			story.replaceText(200, 'At this the poor prince had a cry then cupped his hands for one last try.');
-
-			story.addText(7000, '<p>"Rapunzel, Rapunzel let down your braid". Confused Rapunzel pushed out her MAID!!!</p>');	
-			
+			story.addText(7000, '<p>"Rapunzel, Rapunzel let down your braid". Confused Rapunzel pushed out her MAID!!!</p>');
 		});
 
 
