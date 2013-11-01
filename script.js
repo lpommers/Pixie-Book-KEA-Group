@@ -24,6 +24,7 @@ $(function(){
 		});
 	};
 
+	//a function that deletes all the text on the page and replaces it with something else
 	$.fn.replaceText = function(time, newText){
 		this.delay(time).queue(function(next){
 			$(this).text(newText);
@@ -31,6 +32,7 @@ $(function(){
 		});
 	};
   
+  	//adds text to the current parchment.
 	$.fn.addText = function(time, newHTML){
 		this.delay(time).queue(function(next){
 			$(this).append(newHTML);
