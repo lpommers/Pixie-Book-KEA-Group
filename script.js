@@ -235,9 +235,10 @@ $(function(){
 
 		story.replaceText(6500, '"I fell for you when we first met", he nodded, "how could I forget"');
 		story.replaceText(6700, '');
-
+		
+		//interactive hearts
 		var makeSomeHearts = function(){
-			var thisNewHeart = $('<img class="hearts"/src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
+			var thisNewHeart = $('<img class="hearts" src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
 			var rtop = (Math.random()*100) + "%";
 			var rleft = (Math.random()*100) + "%";
 			//var rRot = "rotate" + (Math.random()*360) + "deg";
@@ -245,7 +246,7 @@ $(function(){
 			$('#scene5').append(thisNewHeart);
 		};
 
-		$('#scene5').click(makeSomeHearts, 2000);	
+		$('#scene5').click(makeSomeHearts);	
 			
 		//calls scrolling method
 		// scroll($anchor, 2000);
