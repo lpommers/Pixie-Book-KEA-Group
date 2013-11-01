@@ -129,6 +129,15 @@ INDIVIDUAL SCENES
 	overflow: hidden;
 }
 
+img.hearts {
+	position:absolute;	
+	height:250px;
+	width:auto;
+	-webkit-animation:maid 1s linear infinite;
+    -moz-animation:maid 1s linear infinite;
+    animation:maid 1s linear infinite;
+}
+
 #falling-objects {
 	position:relative;
 	height:auto;
