@@ -24,6 +24,20 @@ $(function(){
 			$(this).pulse();
 		});
   	}
+
+  	$.fn.replaceText = function(time, newText){
+    	this.delay(time).queue(function(next){
+      		$(this).text(newText);
+        	next();
+    	});
+  	}
+  
+    $.fn.addText = function(time, newHTML){
+    	this.delay(time).queue(function(next){
+      		$(this).append(newHTML);
+       		next();   
+    	});
+    }
   	
   	//to call on the text
   	var story = $('#text>div');
@@ -74,13 +88,20 @@ $(function(){
 		var $anchor = $(this);
 
 		// TEXT SEQUENCES
-			story.text('Alas she was too far away to quite make out what he would say');
-		window.setTimeout(function(){story.text('Rapunzel, Rapunzel throw down your hair she thought he said your underwear')}, 5000);
-		window.setTimeout(function(){story.append('<br><br> No Rapunzel your curly locks rapunzel threw down her dirty socks')}, 11000);
-		window.setTimeout(function(){story.text('Rapunzel do you have a rope Rapunzel dropped a cantaloupe')}, 15500);
-		window.setTimeout(function(){story.append('<br><br>It burst in pieces by his side "Oh bad catch!" Rapunzel cried')}, 20000);
-		window.setTimeout(function(){story.text('Perhaps, he sighed, this is a test and bound by love he did not rest ')}, 26000);
-		window.setTimeout(function(){story.append('<br><br>Okay Rapunzel how about twine she heaved out her blue ribbon swine')}, 33000);
+		story.replaceText(200, 'Alas she was too far away to quite make out what he would say.');
+
+		story.addText(4000,'<p>"Rapunzel, Rapunzel throw down your hair". She thought he said your underwear.</p>');
+
+		story.addText(6000,'<p>"No Rapunzel your curly locks". Rapunzel threw down her dirty socks.</p>');	
+		
+		story.replaceText(6000, '"Rapunzel, do you have a rope?". Rapunzel dropped a cantaloupe.');
+
+		story.addText(4000,'<p>It burst in pieces by his side. "Oh, bad catch!" Rapunzel cried.</p>');
+
+		story.addText(7000, '<p>"Perhaps" he sighed "This is a test", and bound by love he did not rest.</p>');
+
+		story.replaceText(7500, '"Okay Rapunzel, how about twine?" She heaved out her blue ribbon swine.'); 
+
 		
 		//fades in button and scene
 		
@@ -131,6 +152,9 @@ $(function(){
 			$('#scene3-audio').get(0).play();
 			
 			// TEXT change
+		story.text('At this the poor prince had a cry then cupped his hands for one last try');
+
+
 		story.text('At this the poor prince had a cry then cupped his hands for one last try');
 		window.setTimeout(function(){story.append('<br><br>Rapunzel Rapunzel let down your braid confused Rapunzel pushed out her maid')}, 7000);	
 			
