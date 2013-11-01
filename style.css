@@ -112,7 +112,7 @@ INDIVIDUAL SCENES
 	overflow:hidden;
 }
 
-#title-scene img{
+#title-scene img.title-scene{
 	height:100%;
 	width:auto;
 	margin:auto;
@@ -135,8 +135,21 @@ INDIVIDUAL SCENES
 }
 
 /**==============
-	PRINCE HORSE ANIMATION
+	MAID/PRINCE HORSE ANIMATION
 =================**/
+
+
+img.maid-title{
+	position: absolute;
+	height:40%;
+	width:auto;
+	z-index:40;
+	-webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+
+}
+
 
 #prince-horse{
 	position: relative;
