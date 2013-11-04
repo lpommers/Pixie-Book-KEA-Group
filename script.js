@@ -247,11 +247,6 @@ $(function(){
 
 		story.replaceText(6700, '');
 
-		$("#text img").delay(6700).queue(function(){
-			$(this).attr('src','http://a13pixie12.keaweb.dk/img/theend.png');
-			$(this).pulse();
-	});
-		
 		//interactive hearts
 		var makeSomeHearts = function(){
 			var thisNewHeart = $('<img class="hearts" src="http://a13pixie12.keaweb.dk/img/hearts.png" alt="last scene">');
