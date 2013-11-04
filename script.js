@@ -99,7 +99,7 @@ $(function(){
 
     // This is the second click. It leaves the first screen and scrolls to the top of the tower. 
 	$('#scene2-action').bind('click', function(){
-		var $anchor = $(this);
+		
 
 		// TEXT SEQUENCES
 		story.replaceText(200, 'Alas she was too far away to quite make out what he would say.');
@@ -158,7 +158,7 @@ $(function(){
 
 	//this is click 4, the maid falling. 
 	$('#scene3-action').bind('click', function(){
-		var $anchor = $(this);
+		
 	
 		$('.fallingitems, #princetower').fadeOut(2000);
 		
@@ -197,7 +197,7 @@ $(function(){
 
 	//maid and prince falling in love. 
 	$('#scene4-action').bind('click', function(){
-		var $anchor = $(this);
+		
 
 		$('#scene5-action').delay(16000).fadeIn(1000).pulse();
 		$('#scene4-wrapper').show();
@@ -224,7 +224,7 @@ $(function(){
 
 	//final scene. 
 	$('#scene5-action').bind('click', function(){
-		var $anchor = $(this);
+		
 		
 		$('#scene5-wrapper').show();
 		$('#scene5').show();
@@ -244,7 +244,13 @@ $(function(){
 
 
 		story.replaceText(6500, '"I fell for you when we first met", he nodded, "how could I forget"');
+
 		story.replaceText(6700, '');
+
+		$("#text img").delay(6700).queue(function(){
+			$(this).attr('src','http://a13pixie12.keaweb.dk/img/theend.png');
+			$(this).pulse();
+	});
 		
 		//interactive hearts
 		var makeSomeHearts = function(){
