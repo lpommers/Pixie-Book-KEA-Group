@@ -100,6 +100,18 @@ BORDER AND TEXT BOX
 	background-repeat: no-repeat;
 }
 
+#end-button {
+	position:absolute;
+	top:50px;
+	right:60px;
+	width:200px;
+	height:400px;
+	z-index:31;
+	background-image: url("http://a13pixie12.keaweb.dk/img/theend.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	
+}
 
 /**==============
 INDIVIDUAL SCENES
@@ -150,14 +162,35 @@ img.hearts {
 
 #maid-title{
 	position: absolute;
+	top:0;
 	height:60%;
 	width:auto;
 	z-index:40;
+	-webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+
+}
+
+#characters {
+	position:absolute;
+	bottom:0;
+	left:20%;
+	right:20%;
+	width:500px;
+	height:auto;
+	margin:auto;
+	z-index:30;
 	-webkit-animation:maid 1s linear infinite;
     -moz-animation:maid 1s linear infinite;
     animation:maid 1s linear infinite;
-
 }
+
+#prince-title, #princess-title {
+	display:inline-block;
+	width:49%;
+}
+
 
 @keyframes maid {20% {transform: scale(0.9);} 100% {transform: scale(1);}}
 @-moz-keyframes maid {20% {-moz-transform: scale(0.9);} 100% {-moz-transform: scale(1);}}

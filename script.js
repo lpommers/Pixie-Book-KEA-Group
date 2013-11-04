@@ -45,10 +45,18 @@ $(function(){
 	//shows the first button and starts blinking
 	$('#scene1-action').show().pulse();
 	
-	//interactive maid on title screen
+	//interactive characters on title screen
 	$('#maid-title').draggable();
 	$('#maid-title').on('mousedown',function(){
 		$('#maidscream-audio').get(0).play();
+	});
+	
+	$('#prince-title').on('mousedown',function(){
+	$('#prince-audio').get(0).play();
+	});
+	
+	$('#princess-title').on('mousedown',function(){
+	$('#princess-audio').get(0).play();
 	});
 	
 	// This is the first click. It leaves the title screen and scrolls the first screen.
@@ -56,7 +64,7 @@ $(function(){
 		var $anchor = $(this);
 
 		//fades in the button, text, and the scene background
-		$('#scene2-action').delay(5000).fadeIn(1000).pulse();
+		$('#scene2-action').delay(21000).fadeIn(1000).pulse();
 		$('#text').fadeIn(2500);
 		$('#scene1-wrapper, #scene1').show();
 
@@ -112,7 +120,7 @@ $(function(){
 		//fades in button and scene
 		
 		$('#scene2-1-wrapper, #scene2-1, #falling-objects, #scene2-2-wrapper, #scene2-2, #scene2-3-wrapper, #scene2-3, #princetower').show();
-		$('#scene3-action').delay(5000).fadeIn(1000).pulse();
+		$('#scene3-action').delay(39000).fadeIn(1000).pulse();
 
 
 		$('#scene2-action').scroll(7000);
@@ -178,7 +186,9 @@ $(function(){
 		$('#scene3').css({'backgroundColor':'white'})
 	 	});
 	
-		$('#scene4-action').delay(15000).fadeIn(1000).pulse();
+		$('#scene4-action').delay(22000).fadeIn(1000).pulse();
+		
+		$('#scene3-action').delay(1000).fadeOut(2000);
 
 		$('#scene2-1, #scene2-1-wrapper, #scene2-wrapper, #scene2, #scene2-2-wrapper, #scene2-2, #scene2-3, #scene2-3-wrapper, .fallingitems').delay(20000).fadeOut(2000);
 
@@ -189,7 +199,7 @@ $(function(){
 	$('#scene4-action').bind('click', function(){
 		var $anchor = $(this);
 
-		$('#scene5-action').delay(5000).fadeIn(1000).pulse();
+		$('#scene5-action').delay(16000).fadeIn(1000).pulse();
 		$('#scene4-wrapper').show();
 		$('#scene4').show();
 
@@ -254,7 +264,6 @@ $(function(){
 
 		//shows the the end - replay button
 		$('#end-button').delay(23000).fadeIn().pulse();
-		$('#end-button').css({'backgroundImage':'url("http://a13pixie12.keaweb.dk/img/theend.png")', 'width':'10em', 'height':'38em'});
 
 		$('#scene4-wrapper, #scene4').fadeOut(2000);
 		});

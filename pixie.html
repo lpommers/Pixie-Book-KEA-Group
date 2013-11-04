@@ -35,15 +35,29 @@
 		<div id='title-scene'>
 			<!-- title screen button - links to first scene -->
 			<a class='button' id='scene1-action' href="#scene1"></a>
-			<!-- interactive maid -->
-			<img id="maid-title" src="http://a13pixie12.keaweb.dk/img/maidfalling.png" alt="scene1">
+			
 			<!-- title screen image -->
 			<img class="title-scene" src="http://a13pixie12.keaweb.dk/img/startscreen.png" alt="scene1">
 			
-	<!-- interactive maid audio  -->
+			<!-- interactive characters -->
+			<img id="maid-title" src="http://a13pixie12.keaweb.dk/img/maidfalling.png" alt="scene1">
+			<div id="characters">
+			<img id="prince-title" src="http://a13pixie12.keaweb.dk/img/prince-title.png" alt="prince title">
+			<img id="princess-title" src="http://a13pixie12.keaweb.dk/img/princess-title.png" alt="princess title">
+			</div>
+			
+			<!-- interactive audio  -->
 			<audio id='maidscream-audio'>
 				<source src='http://a13pixie12.keaweb.dk/audio/scene1/wilhelmscream.mp3' type='audio/mpeg'>
 				<source src='http://a13pixie12.keaweb.dk/audio/scene1/wilhelmscream.ogg' type='audio/ogg'>
+			</audio>
+			<audio id='princess-audio'>
+				<source src='http://a13pixie12.keaweb.dk/audio/click/princess.mp3' type='audio/mpeg'>
+				<source src='http://a13pixie12.keaweb.dk/audio/click/princess.ogg' type='audio/ogg'>
+			</audio>
+			<audio id='prince-audio'>
+				<source src='http://a13pixie12.keaweb.dk/audio/click/prince.mp3' type='audio/mpeg'>
+				<source src='http://a13pixie12.keaweb.dk/audio/click/prince.ogg' type='audio/ogg'>
 			</audio>
 			
 		</div>
@@ -160,7 +174,7 @@
 		<!-- scene 6 buttom - link to top -->
 		
 
-		<a class='button' id='end-button' href="#"></a>
+		<a id='end-button' href="#"></a>
 		
 		<audio id='scene5-audio'>
 				<source src='http://a13pixie12.keaweb.dk/audio/scene6/scene6.mp3' type='audio/mpeg'>
