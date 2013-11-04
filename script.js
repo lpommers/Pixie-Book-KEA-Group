@@ -1,6 +1,6 @@
 $(function(){
 	// this hides all the scenes except the title scene when the page loads
-	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button, #princecrying').hide();
+	$('.scene, .scene-wrapper, .fallingitems, #falling-objects, #princessroom, #screamface, #princetower, #text, .button, #princecrying, #end-button').hide();
 
 	//creates a function that handles the scrolling. It takes two parameters. 
 	$.fn.scroll = function(time){
